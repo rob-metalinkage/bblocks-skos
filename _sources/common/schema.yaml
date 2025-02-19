@@ -34,6 +34,9 @@ properties:
   id:
     $ref: bblocks://ogc.ogc-utils.iri-or-curie
 
+  skosType:
+    enum: [Concept, ConceptScheme, Collection, OrderedCollection]
+
   prefLabel:
     $ref: '#/$defs/languageString'
   altLabel:

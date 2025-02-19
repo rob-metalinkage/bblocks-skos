@@ -1,0 +1,13 @@
+{
+  "@context": {
+    "members": {
+      "@id": "skos:members",
+      "@type": "@id"
+    },
+    "memberList": {
+      "@id": "skos:memberList",
+      "@type": "@id",
+      "@container": "@list"
+    }
+  }
+}

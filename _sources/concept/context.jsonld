@@ -1,0 +1,48 @@
+{
+  "@context": {
+    "topConceptOf": {
+      "@id": "skos:topConceptOf",
+      "@type": "@id"
+    },
+    "inScheme": {
+      "@id": "skos:inScheme",
+      "@type": "@id"
+    },
+    "broaderConcepts": {
+      "@id": "skos:broaderConcepts",
+      "@type": "@id"
+    },
+    "narrowerConcepts": {
+      "@id": "skos:narrowerConcepts",
+      "@type": "@id"
+    },
+    "relatedConcepts": {
+      "@id": "skos:relatedConcepts",
+      "@type": "@id"
+    },
+    "closeMatches": {
+      "@id": "skos:closeMatches",
+      "@type": "@id"
+    },
+    "exactMatches": {
+      "@id": "skos:exactMatches",
+      "@type": "@id"
+    },
+    "broadMatches": {
+      "@id": "skos:broadMatches",
+      "@type": "@id"
+    },
+    "narrowMatches": {
+      "@id": "skos:narrowMatches",
+      "@type": "@id"
+    },
+    "relatedMatches": {
+      "@id": "skos:relatedMatches",
+      "@type": "@id"
+    },
+    "collections": {
+      "@id": "skos:collections",
+      "@type": "@id"
+    }
+  }
+}

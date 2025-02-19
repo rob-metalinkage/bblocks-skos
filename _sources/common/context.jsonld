@@ -1,0 +1,21 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "id": "@id",
+    "skosType": "@type",
+    "prefLabel": "skos:prefLabel",
+    "altLabel": "skos:altLabel",
+    "notation": "skos:notation",
+    "note": "skos:note",
+    "changeNote": "skos:changeNote",
+    "definition": "skos:definition",
+    "editorialNote": "skos:editorialNote",
+    "example": "skos:example",
+    "historyNote": "skos:historyNote",
+    "scopeNote": "skos:scopeNote",
+    "ConceptScheme": "skos:ConceptScheme",
+    "Concept": "skos:Concept",
+    "Collection": "skos:Collection",
+    "OrderedCollection": "skos:OrderedCollection"
+  }
+}

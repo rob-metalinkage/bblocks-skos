@@ -1,0 +1,12 @@
+{
+  "@context": {
+    "concepts": {
+      "@reverse": "skos:inScheme",
+      "@type": "@id"
+    },
+    "topConcepts": {
+      "@id": "skos:hasTopConcept",
+      "@type": "@id"
+    }
+  }
+}
