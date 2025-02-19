@@ -7,6 +7,30 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<https://ogcincubator.github.io/ogc.skos.sharedProfile> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Model ;
+    rdfs:label "SKOS Shared Profile" ;
+    dct:abstract "A shared SKOS profile with validation shapes" ;
+    dct:created "2025-02-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/sharedProfile/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.sharedProfile" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/sharedProfile/index.json" ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-02-19"^^xsd:date ;
+    dct:source <https://www.w3.org/TR/skos-reference/> ;
+    skos:inScheme <https://ogcincubator.github.io/bblocks-skos/> ;
+    dcat:keyword "profile",
+        "skos" ;
+    bblocks:dependsOn <https://ogcincubator.github.io/ogc.skos.collection>,
+        <https://ogcincubator.github.io/ogc.skos.concept>,
+        <https://ogcincubator.github.io/ogc.skos.conceptScheme> ;
+    bblocks:hasShaclRule <https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> .
+
 <https://ogcincubator.github.io/ogc.skos.collection> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
@@ -15,10 +39,10 @@
     dct:created "2025-02-09T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/collection/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.collection" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/collection/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/collection/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.collection" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-02-19"^^xsd:date ;
     dct:source <https://www.w3.org/TR/skos-reference/> ;
@@ -31,6 +55,7 @@
     bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/collection/context.jsonld> ;
     bblocks:hasSchema <https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/collection/schema.json>,
         <https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/collection/schema.yaml> ;
+    bblocks:hasShaclRule <https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl> ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-skos/_sources/collection/context.jsonld> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
@@ -40,12 +65,12 @@
     rdfs:label "SKOS ConceptScheme" ;
     dct:abstract "A Concept Scheme as defined in SKOS" ;
     dct:created "2025-02-09T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/conceptScheme/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.conceptScheme" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/conceptScheme/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/conceptScheme/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/conceptScheme/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-02-19"^^xsd:date ;
     dct:source <https://www.w3.org/TR/skos-reference/> ;
@@ -58,35 +83,8 @@
     bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/context.jsonld> ;
     bblocks:hasSchema <https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/schema.json>,
         <https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/schema.yaml> ;
+    bblocks:hasShaclRule <https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl> ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-skos/_sources/conceptScheme/context.jsonld> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
-
-<https://ogcincubator.github.io/ogc.skos.concept> a skos:Concept,
-        dcat:Dataset,
-        bblocks:Schema ;
-    rdfs:label "SKOS Concept" ;
-    dct:abstract "A Concept as defined in SKOS" ;
-    dct:created "2025-02-09T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/concept/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/concept/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.concept" ] ;
-    dct:hasVersion "0.1" ;
-    dct:modified "2025-02-19"^^xsd:date ;
-    dct:source <https://www.w3.org/TR/skos-reference/> ;
-    skos:inScheme <https://ogcincubator.github.io/bblocks-skos/> ;
-    dcat:keyword "concept",
-        "skos" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.ogc-utils.iri-or-curie>,
-        <https://ogcincubator.github.io/ogc.skos.collection>,
-        <https://ogcincubator.github.io/ogc.skos.common>,
-        <https://ogcincubator.github.io/ogc.skos.conceptScheme> ;
-    bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/context.jsonld> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/schema.json>,
-        <https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/schema.yaml> ;
-    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-skos/_sources/concept/context.jsonld> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
 <https://ogcincubator.github.io/ogc.skos.common> a skos:Concept,
@@ -97,10 +95,10 @@
     dct:created "2025-02-09T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.common" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/common/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/common/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/common/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/common/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-02-19"^^xsd:date ;
     dct:source <https://www.w3.org/TR/skos-reference/> ;
@@ -114,7 +112,37 @@
     bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld> ;
     bblocks:hasSchema <https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/schema.json>,
         <https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/schema.yaml> ;
+    bblocks:hasShaclRule <https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl> ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-skos/_sources/common/context.jsonld> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> .
+
+<https://ogcincubator.github.io/ogc.skos.concept> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Schema ;
+    rdfs:label "SKOS Concept" ;
+    dct:abstract "A Concept as defined in SKOS" ;
+    dct:created "2025-02-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/concept/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.concept" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/concept/index.json" ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-02-19"^^xsd:date ;
+    dct:source <https://www.w3.org/TR/skos-reference/> ;
+    skos:inScheme <https://ogcincubator.github.io/bblocks-skos/> ;
+    dcat:keyword "concept",
+        "skos" ;
+    bblocks:dependsOn <https://ogcincubator.github.io/ogc.ogc-utils.iri-or-curie>,
+        <https://ogcincubator.github.io/ogc.skos.collection>,
+        <https://ogcincubator.github.io/ogc.skos.common>,
+        <https://ogcincubator.github.io/ogc.skos.conceptScheme> ;
+    bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/context.jsonld> ;
+    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/schema.json>,
+        <https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/schema.yaml> ;
+    bblocks:hasShaclRule <https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl> ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-skos/_sources/concept/context.jsonld> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
 <https://ogcincubator.github.io/bblocks-skos/> a skos:ConceptScheme,
@@ -139,15 +167,15 @@ such as the Web Ontology language (OWL).
 <https://www.w3.org/TR/skos-reference/> rdfs:label "SKOS Reference" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-02-19T20:26:03.585512"^^xsd:dateTime ;
-    prov:startedAtTime "2025-02-19T20:26:03.524590"^^xsd:dateTime ;
+    prov:endedAtTime "2025-02-19T20:45:57.142524"^^xsd:dateTime ;
+    prov:startedAtTime "2025-02-19T20:45:57.078508"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-        [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:6b71415ecf6c05fe6968e6cecd8b25ddfaadd958" ;
-            rdfs:seeAlso <https://ogcincubator.github.io/bblocks-skos/build/register.json> ] ;
+            dct:hasVersion "git:d38f300c0cb338314e733b77ab3a153623a98013" ;
+            rdfs:seeAlso <https://ogcincubator.github.io/bblocks-skos/build/register.json> ],
+        [ a prov:Entity ;
+            dct:format "application/yaml" ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;

@@ -21,12 +21,16 @@
     "skos",
     "concept"
   ],
-  "shaclRules": {},
+  "shaclRules": {
+    "ogc.skos.common": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+    ]
+  },
   "dependsOn": [
-    "ogc.skos.collection",
-    "ogc.skos.conceptScheme",
+    "ogc.skos.common",
     "ogc.ogc-utils.iri-or-curie",
-    "ogc.skos.common"
+    "ogc.skos.conceptScheme",
+    "ogc.skos.collection"
   ],
   "ldContext": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/context.jsonld",
   "schema": {

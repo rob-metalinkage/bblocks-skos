@@ -24,7 +24,11 @@
     "altLabel",
     "hiddenLabel"
   ],
-  "shaclRules": {},
+  "shaclRules": {
+    "ogc.skos.common": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+    ]
+  },
   "dependsOn": [
     "ogc.ogc-utils.iri-or-curie"
   ],

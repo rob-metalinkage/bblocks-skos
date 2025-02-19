@@ -2,9 +2,269 @@
   "title": "Validation report for ogc.skos.common - Common SKOS properties",
   "bblockName": "Common SKOS properties",
   "bblockId": "ogc.skos.common",
-  "generated": "2025-02-19T20:26:03.476969+00:00",
+  "generated": "2025-02-19T20:45:57.022632+00:00",
   "result": true,
   "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/common/tests/single-prefLabel-fail.json",
+        "url": "https://ogcincubator.github.io/bblocks-skos/_sources/common/tests/single-prefLabel-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using single-prefLabel-fail.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "single-prefLabel-fail.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD single-prefLabel-fail.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "single-prefLabel-fail.ttl",
+              "size": 2,
+              "isError": false,
+              "message": "Output Turtle single-prefLabel-fail.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "['one', 'two'] is not valid under any of the given schemas",
+              "isError": true,
+              "message": "ValidationError: ['one', 'two'] is not valid under any of the given schemas\n\nFailed validating 'oneOf' in schema['properties']['prefLabel']:\n    {'oneOf': [{'type': 'string'},\n               {'additionalProperties': False,\n                'patternProperties': {'^([A-Za-z]{1,8}(-[A-Za-z0-9]{1,8})*)?$': {'type': 'string'}},\n                'type': 'object'}]}\n\nOn instance['prefLabel']:\n    ['one', 'two']"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/common/rules.shacl",
+              "graph": "@prefix : <http://blocks.ogc.org/skos#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode [ skos:prefLabel \"one\",\n                        \"two\" ] ;\n            sh:resultMessage \"Only one prefLabel per language is allowed\" ;\n            sh:resultPath skos:prefLabel ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint [ sh:message \"Only one prefLabel per language is allowed\" ;\n                    sh:select \"\"\"\n        prefix skos: <http://www.w3.org/2004/02/skos/core#>\n        SELECT $this (skos:prefLabel as ?path) (?lang as ?value) WHERE {\n          $this skos:prefLabel ?label .\n          BIND(LANG(?label) as ?lang)\n        }\n        GROUP BY ?lang\n        HAVING (COUNT(?label) > 1)\n        LIMIT 1\n      \"\"\" ] ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape :singlePrefLabel ;\n            sh:value \"\" ] .\n\n",
+              "isError": true,
+              "message": "Validation result for _sources/common/rules.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: :singlePrefLabel\n  \tFocus Node: [ skos:prefLabel Literal(\"one\"), Literal(\"two\") ]\n  \tValue Node: Literal(\"\")\n  \tResult Path: skos:prefLabel\n  \tSource Constraint: [ sh:message Literal(\"Only one prefLabel per language is allowed\") ; sh:select Literal(\"\n          prefix skos: <http://www.w3.org/2004/02/skos/core#>\n          SELECT $this (skos:prefLabel as ?path) (?lang as ?value) WHERE {\n            $this skos:prefLabel ?label .\n            BIND(LANG(?label) as ?lang)\n          }\n          GROUP BY ?lang\n          HAVING (COUNT(?label) > 1)\n          LIMIT 1\n        \") ]\n  \tMessage: Only one prefLabel per language is allowed\n  "
+            },
+            {
+              "shaclFile": "_sources/common/rules.shacl",
+              "focusNodes": {
+                ":singlePrefLabel": {
+                  "nodes": [
+                    "_:Nccd01987bcdd40c99703703ffe85ab5c"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:Nccd01987bcdd40c99703703ffe85ab5c\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/common/tests/single-prefLabel-lang-fail.json",
+        "url": "https://ogcincubator.github.io/bblocks-skos/_sources/common/tests/single-prefLabel-lang-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using single-prefLabel-lang-fail.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "single-prefLabel-lang-fail.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD single-prefLabel-lang-fail.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "single-prefLabel-lang-fail.ttl",
+              "size": 3,
+              "isError": false,
+              "message": "Output Turtle single-prefLabel-lang-fail.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "['one', 'two'] is not of type 'string'",
+              "isError": true,
+              "message": "ValidationError: ['one', 'two'] is not of type 'string'\n\nFailed validating 'type' in schema[1]['patternProperties']['^([A-Za-z]{1,8}(-[A-Za-z0-9]{1,8})*)?$']:\n    {'type': 'string'}\n\nOn instance['en']:\n    ['one', 'two']"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/common/rules.shacl",
+              "graph": "@prefix : <http://blocks.ogc.org/skos#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode [ skos:prefLabel \"one\"@en,\n                        \"two\"@en,\n                        \"one\"@es ] ;\n            sh:resultMessage \"Only one prefLabel per language is allowed\" ;\n            sh:resultPath skos:prefLabel ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint [ sh:message \"Only one prefLabel per language is allowed\" ;\n                    sh:select \"\"\"\n        prefix skos: <http://www.w3.org/2004/02/skos/core#>\n        SELECT $this (skos:prefLabel as ?path) (?lang as ?value) WHERE {\n          $this skos:prefLabel ?label .\n          BIND(LANG(?label) as ?lang)\n        }\n        GROUP BY ?lang\n        HAVING (COUNT(?label) > 1)\n        LIMIT 1\n      \"\"\" ] ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape :singlePrefLabel ;\n            sh:value \"en\" ] .\n\n",
+              "isError": true,
+              "message": "Validation result for _sources/common/rules.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: :singlePrefLabel\n  \tFocus Node: [ skos:prefLabel Literal(\"one\", lang=en), Literal(\"one\", lang=es), Literal(\"two\", lang=en) ]\n  \tValue Node: Literal(\"en\")\n  \tResult Path: skos:prefLabel\n  \tSource Constraint: [ sh:message Literal(\"Only one prefLabel per language is allowed\") ; sh:select Literal(\"\n          prefix skos: <http://www.w3.org/2004/02/skos/core#>\n          SELECT $this (skos:prefLabel as ?path) (?lang as ?value) WHERE {\n            $this skos:prefLabel ?label .\n            BIND(LANG(?label) as ?lang)\n          }\n          GROUP BY ?lang\n          HAVING (COUNT(?label) > 1)\n          LIMIT 1\n        \") ]\n  \tMessage: Only one prefLabel per language is allowed\n  "
+            },
+            {
+              "shaclFile": "_sources/common/rules.shacl",
+              "focusNodes": {
+                ":singlePrefLabel": {
+                  "nodes": [
+                    "_:N74324f73010c4a1fbcaf68ade73dbb74"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:N74324f73010c4a1fbcaf68ade73dbb74\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": false,
+        "filename": "_sources/common/tests/single-prefLabel.json",
+        "url": "https://ogcincubator.github.io/bblocks-skos/_sources/common/tests/single-prefLabel.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using single-prefLabel.json from test resources"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "single-prefLabel.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD single-prefLabel.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "single-prefLabel.ttl",
+              "size": 3,
+              "isError": false,
+              "message": "Output Turtle single-prefLabel.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/common/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/common/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/common/rules.shacl",
+              "focusNodes": {
+                ":singlePrefLabel": {
+                  "nodes": [
+                    "_:N7f86566e812c4118b7cc67f0e447b11d"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:N7f86566e812c4118b7cc67f0e447b11d\n"
+            }
+          ]
+        }
+      ]
+    },
     {
       "source": {
         "type": "EXAMPLE",
@@ -55,6 +315,31 @@
               "result": true,
               "isError": false,
               "message": "Validation passed"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/common/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/common/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/common/rules.shacl",
+              "focusNodes": {
+                ":singlePrefLabel": {
+                  "nodes": [
+                    "_:N57d952564d1c468daced567822e06db4"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:N57d952564d1c468daced567822e06db4\n"
             }
           ]
         }
@@ -112,6 +397,31 @@
               "message": "Validation passed"
             }
           ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/common/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/common/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/common/rules.shacl",
+              "focusNodes": {
+                ":singlePrefLabel": {
+                  "nodes": [
+                    "_:N99fef795baee4b43bf413d1f86ab9a8e"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:N99fef795baee4b43bf413d1f86ab9a8e\n"
+            }
+          ]
         }
       ]
     },
@@ -167,14 +477,37 @@
               "message": "Validation passed"
             }
           ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/common/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/common/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/common/rules.shacl",
+              "focusNodes": {
+                ":singlePrefLabel": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: *none*\n"
+            }
+          ]
         }
       ]
     }
   ],
   "globalErrors": {},
   "counts": {
-    "total": 3,
-    "passed": 3,
+    "total": 6,
+    "passed": 6,
     "failed": 0
   }
 }

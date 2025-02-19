@@ -1,0 +1,58 @@
+Validation report for ogc.skos.common - Common SKOS properties
+Generated 2025-02-19T20:45:56.959890+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using single-prefLabel-fail.json from test resources
+JSON-LD context is present - uplifting
+Output JSON-LD single-prefLabel-fail.jsonld created
+Output Turtle single-prefLabel-fail.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: ['one', 'two'] is not valid under any of the given schemas
+
+Failed validating 'oneOf' in schema['properties']['prefLabel']:
+    {'oneOf': [{'type': 'string'},
+               {'additionalProperties': False,
+                'patternProperties': {'^([A-Za-z]{1,8}(-[A-Za-z0-9]{1,8})*)?$': {'type': 'string'}},
+                'type': 'object'}]}
+
+On instance['prefLabel']:
+    ['one', 'two']
+=== End JSON Schema ===
+
+=== SHACL ===
+
+** Validation error **
+Validation result for _sources/common/rules.shacl:
+  Validation Report
+  Conforms: False
+  Results (1):
+  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: :singlePrefLabel
+  	Focus Node: [ skos:prefLabel Literal("one"), Literal("two") ]
+  	Value Node: Literal("")
+  	Result Path: skos:prefLabel
+  	Source Constraint: [ sh:message Literal("Only one prefLabel per language is allowed") ; sh:select Literal("
+          prefix skos: <http://www.w3.org/2004/02/skos/core#>
+          SELECT $this (skos:prefLabel as ?path) (?lang as ?value) WHERE {
+            $this skos:prefLabel ?label .
+            BIND(LANG(?label) as ?lang)
+          }
+          GROUP BY ?lang
+          HAVING (COUNT(?label) > 1)
+          LIMIT 1
+        ") ]
+  	Message: Only one prefLabel per language is allowed
+  
+Focus nodes for _sources/common/rules.shacl:
+ - Shape :singlePrefLabel: _:Nccd01987bcdd40c99703703ffe85ab5c
+
+=== End SHACL ===
+

@@ -106,7 +106,7 @@
   "name": "Building Blocks - SKOS - Simple Knowledge Organization System",
   "abstract": "SKOS\u2014Simple Knowledge Organization System\u2014provides a model for expressing the basic structure and content of\nconcept schemes such as thesauri, classification schemes, subject heading lists, taxonomies, folksonomies, and other similar types of controlled vocabulary.\n",
   "description": "Many knowledge organization systems, such as thesauri, taxonomies, classification schemes and subject heading\nsystems, share a similar structure, and are used in similar applications. SKOS captures much of this similarity\nand makes it explicit, to enable data and technology sharing across diverse applications.\n\nThe SKOS data model provides a standard, low-cost migration path for porting existing knowledge organization systems \nto the Semantic Web. SKOS also provides a lightweight, intuitive language for developing and sharing new knowledge\norganization systems. It may be used on its own, or in combination with formal knowledge representation languages\nsuch as the Web Ontology language (OWL).\n",
-  "modified": "2025-02-19T20:26:02.200538",
+  "modified": "2025-02-19T20:45:55.566203",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"d55f19ed1d0bbb9bb303b0c60ac20ed4e4fb3c36",
@@ -152,7 +152,11 @@
         "altLabel",
         "hiddenLabel"
       ],
-      "shaclRules": {},
+      "shaclRules": {
+        "ogc.skos.common": [
+          "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+        ]
+      },
       "dependsOn": [
         "ogc.ogc-utils.iri-or-curie"
       ],
@@ -188,6 +192,67 @@
       ]
     },
     {
+      "itemIdentifier": "ogc.skos.collection",
+      "name": "SKOS Collection",
+      "abstract": "A Collection as defined in SKOS",
+      "highlighted": true,
+      "status": "under-development",
+      "dateTimeAddition": "2025-02-09T00:00:00Z",
+      "itemClass": "schema",
+      "register": "ogc",
+      "version": "0.1",
+      "dateOfLastChange": "2025-02-19",
+      "sources": [
+        {
+          "title": "SKOS Reference",
+          "link": "https://www.w3.org/TR/skos-reference/"
+        }
+      ],
+      "tags": [
+        "skos",
+        "collection"
+      ],
+      "shaclRules": {
+        "ogc.skos.common": [
+          "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+        ]
+      },
+      "dependsOn": [
+        "ogc.skos.concept",
+        "ogc.ogc-utils.iri-or-curie",
+        "ogc.skos.common"
+      ],
+      "ldContext": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/collection/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/collection/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/collection/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-skos/_sources/collection/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-skos/_sources/collection/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-skos/_sources/collection/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/collection/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/collection/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.collection"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
       "itemIdentifier": "ogc.skos.conceptScheme",
       "name": "SKOS ConceptScheme",
       "abstract": "A Concept Scheme as defined in SKOS",
@@ -208,10 +273,14 @@
         "skos",
         "concept scheme"
       ],
-      "shaclRules": {},
+      "shaclRules": {
+        "ogc.skos.common": [
+          "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+        ]
+      },
       "dependsOn": [
-        "ogc.skos.concept",
         "ogc.ogc-utils.iri-or-curie",
+        "ogc.skos.concept",
         "ogc.skos.common"
       ],
       "ldContext": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/context.jsonld",
@@ -265,12 +334,16 @@
         "skos",
         "concept"
       ],
-      "shaclRules": {},
+      "shaclRules": {
+        "ogc.skos.common": [
+          "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+        ]
+      },
       "dependsOn": [
-        "ogc.skos.collection",
-        "ogc.skos.conceptScheme",
+        "ogc.skos.common",
         "ogc.ogc-utils.iri-or-curie",
-        "ogc.skos.common"
+        "ogc.skos.conceptScheme",
+        "ogc.skos.collection"
       ],
       "ldContext": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/context.jsonld",
       "schema": {
@@ -303,13 +376,14 @@
       ]
     },
     {
-      "itemIdentifier": "ogc.skos.collection",
-      "name": "SKOS Collection",
-      "abstract": "A Collection as defined in SKOS",
+      "itemIdentifier": "ogc.skos.sharedProfile",
+      "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/bblock.schema.yaml?",
+      "name": "SKOS Shared Profile",
+      "abstract": "A shared SKOS profile with validation shapes",
       "highlighted": true,
       "status": "under-development",
       "dateTimeAddition": "2025-02-09T00:00:00Z",
-      "itemClass": "schema",
+      "itemClass": "model",
       "register": "ogc",
       "version": "0.1",
       "dateOfLastChange": "2025-02-19",
@@ -319,42 +393,39 @@
           "link": "https://www.w3.org/TR/skos-reference/"
         }
       ],
-      "tags": [
-        "skos",
-        "collection"
-      ],
-      "shaclRules": {},
       "dependsOn": [
         "ogc.skos.concept",
-        "ogc.ogc-utils.iri-or-curie",
-        "ogc.skos.common"
+        "ogc.skos.conceptScheme",
+        "ogc.skos.collection"
       ],
-      "ldContext": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/collection/context.jsonld",
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/collection/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/collection/schema.json"
+      "tags": [
+        "skos",
+        "profile"
+      ],
+      "shaclRules": {
+        "ogc.skos.common": [
+          "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+        ]
       },
-      "sourceSchema": "https://ogcincubator.github.io/bblocks-skos/_sources/collection/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/bblocks-skos/_sources/collection/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/bblocks-skos/_sources/collection/",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-skos/_sources/sharedProfile/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/collection/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/sharedProfile/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/collection/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/sharedProfile/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.collection"
+          "url": "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.sharedProfile"
         }
       },
       "@type": [
-        "bblocks:Schema",
+        "bblocks:Model",
         "skos:Concept",
         "dcat:Dataset"
       ]

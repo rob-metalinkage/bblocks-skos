@@ -1,0 +1,8 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld",
+  "prefLabel": {
+    "": "no lang",
+    "es": "Spanish",
+    "en": "English"
+  }
+}
