@@ -1,0 +1,56 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+
+$defs:
+  conceptOrId:
+    oneOf:
+      - $ref: bblocks://ogc.ogc-utils.iri-or-curie
+      - $ref: '#'
+
+  conceptOrIdArray:
+    oneOf:
+      - $ref: '#/$defs/conceptOrId'
+      - type: array
+        items:
+          $ref: '#/$defs/conceptOrId'
+
+type: object
+properties:
+  topConceptOf:
+    $ref: bblocks://ogc.skos.conceptScheme#/$defs/conceptSchemeOrIdArray
+  inScheme:
+    $ref: bblocks://ogc.skos.conceptScheme#/$defs/conceptSchemeOrIdArray
+
+  broaderConcepts:
+    $ref: '#/$defs/conceptOrIdArray'
+  narrowerConcepts:
+    $ref: '#/$defs/conceptOrIdArray'
+  relatedConcepts:
+    $ref: '#/$defs/conceptOrIdArray'
+
+  closeMatches:
+    $ref: '#/$defs/conceptOrIdArray'
+  exactMatches:
+    $ref: '#/$defs/conceptOrIdArray'
+  broadMatches:
+    $ref: '#/$defs/conceptOrIdArray'
+  narrowMatches:
+    $ref: '#/$defs/conceptOrIdArray'
+  relatedMatches:
+    $ref: '#/$defs/conceptOrIdArray'
+
+  collections:
+    $ref: bblocks://ogc.skos.collection#/$defs/collectionOrIdArray
+
+allOf:
+  - $ref: bblocks://ogc.skos.common
+
+oneOf:
+  - not:
+      required:
+        - skosType
+  - required:
+      - skosType
+    properties:
+      skosType:
+        const: 'Concept'
+

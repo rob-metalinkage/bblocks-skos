@@ -1,0 +1,36 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+
+$defs:
+  conceptSchemeOrId:
+    oneOf:
+      - $ref: bblocks://ogc.ogc-utils.iri-or-curie
+      - $ref: '#'
+
+  conceptSchemeOrIdArray:
+    oneOf:
+      - $ref: '#/$defs/conceptSchemeOrId'
+      - type: array
+        items:
+          $ref: '#/$defs/conceptSchemeOrId'
+
+type: object
+properties:
+  id:
+    $ref: bblocks://ogc.ogc-utils.iri-or-curie
+  concepts:
+    $ref: bblocks://ogc.skos.concept#/$defs/conceptOrIdArray
+  topConcepts:
+    $ref: bblocks://ogc.skos.concept#/$defs/conceptOrIdArray
+
+allOf:
+  - $ref: bblocks://ogc.skos.common
+
+oneOf:
+  - not:
+      required:
+        - skosType
+  - required:
+      - skosType
+    properties:
+      skosType:
+        const: 'ConceptScheme'

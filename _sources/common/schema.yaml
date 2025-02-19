@@ -1,0 +1,64 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+
+$defs:
+  languageString:
+    oneOf:
+      - type: string
+      - type: object
+        patternProperties:
+          '^[A-Za-z]{1,8}(-[A-Za-z0-9]{1,8})*$':
+            type: string
+        additionalProperties: false
+
+  languageStringArray:
+    oneOf:
+      - $ref: '#/$defs/languageString'
+      - type: array
+        items:
+          $ref: '#/$defs/languageString'
+
+  typedValue:
+    oneOf:
+      - type: string
+      - type: object
+        required:
+          - '@value'
+        properties:
+          '@value':
+            type: string
+          '@type':
+            type: string
+
+type: object
+properties:
+  id:
+    $ref: bblocks://ogc.ogc-utils.iri-or-curie
+
+  prefLabel:
+    $ref: '#/$defs/languageString'
+  altLabel:
+    $ref: '#/$defs/languageStringArray'
+  hiddenLabel:
+    $ref: '#/$defs/languageStringArray'
+
+  notation:
+    oneOf:
+      - $ref: '#/$defs/typedValue'
+      - type: array
+        items:
+          $ref: '#/$defs/typedValue'
+
+  note:
+    $ref: '#/$defs/languageStringArray'
+  changeNote:
+    $ref: '#/$defs/languageStringArray'
+  definition:
+    $ref: '#/$defs/languageStringArray'
+  editorialNote:
+    $ref: '#/$defs/languageStringArray'
+  example:
+    $ref: '#/$defs/languageStringArray'
+  historyNote:
+    $ref: '#/$defs/languageStringArray'
+  scopeNote:
+    $ref: '#/$defs/languageStringArray'

@@ -1,0 +1,29 @@
+$schema: https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/examples.schema.yaml?
+
+examples:
+  - title: Single label as a string
+    snippets:
+      - language: json
+        code: '"A single label"'
+
+  - title: A label with two languages
+    snippets:
+      - language: json
+        code: |
+          {
+            "en": "This is a multilingual label",
+            "fr": "Ceci est une étiquette multilingue"
+          }
+
+  - title: Multiple labels combined
+    snippets:
+      - language: json
+        schema-ref: '#/$defs/languageStringArray'
+        code: |
+          [
+            "A label with no language",
+            {
+              "en": "Another one with English and Spanish values",
+              "es": "Otra con valores en inglés y español"
+            }
+          ]

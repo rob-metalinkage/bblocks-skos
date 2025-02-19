@@ -1,0 +1,18 @@
+{
+  "name": "SKOS Concept",
+  "abstract": "A Concept as defined in SKOS",
+  "highlighted": true,
+  "status": "under-development",
+  "dateTimeAddition": "2025-02-09T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc",
+  "version": "0.1",
+  "dateOfLastChange": "2025-02-19",
+  "sources": [
+    {
+      "title": "SKOS Reference",
+      "link": "https://www.w3.org/TR/skos-reference/"
+    }
+  ],
+  "tags": ["skos", "concept"]
+}

@@ -1,18 +1,23 @@
 # A short, descriptive name of this building block collection
-name: My OGC Building Blocks repository
+name: SKOS - Simple Knowledge Organization System
 
 # Short abstract for this collection (optional)
 abstract: |
-  This is an example text for the abstract. It should be short and to the point.
-  A "Tell me more" link will appear if there is an additional description with a longer explanation.
+  SKOS—Simple Knowledge Organization System—provides a model for expressing the basic structure and content of
+  concept schemes such as thesauri, classification schemes, subject heading lists, taxonomies, folksonomies, and other similar types of controlled vocabulary.
 
-# Description for this collection (optional)
 description: |
-  The description can be longer. Both **the abstract** *and the description* support Markdown,
-  including [links](https://google.es).
+  Many knowledge organization systems, such as thesauri, taxonomies, classification schemes and subject heading
+  systems, share a similar structure, and are used in similar applications. SKOS captures much of this similarity
+  and makes it explicit, to enable data and technology sharing across diverse applications.
+
+  The SKOS data model provides a standard, low-cost migration path for porting existing knowledge organization systems 
+  to the Semantic Web. SKOS also provides a lightweight, intuitive language for developing and sharing new knowledge
+  organization systems. It may be used on its own, or in combination with formal knowledge representation languages
+  such as the Web Ontology language (OWL).
 
 # Customize the following prefix (will be prepended to the path of the building blocks):
-identifier-prefix: ogc.bbr.template.
+identifier-prefix: ogc.skos.
 
 # List of imports ("default" is an alias for the main OGC Building Blocks Register)
 imports:

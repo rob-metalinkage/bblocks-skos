@@ -1,0 +1,44 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+
+$defs:
+  collectionOrId:
+    oneOf:
+      - $ref: bblocks://ogc.ogc-utils.iri-or-curie
+      - $ref: '#'
+
+  collectionOrIdArray:
+    oneOf:
+      - $ref: '#/$defs/collectionOrId'
+      - type: array
+        items:
+          $ref: '#/$defs/collectionOrId'
+
+type: object
+
+allOf:
+  - $ref: bblocks://ogc.skos.common
+
+oneOf:
+  - not:
+      required:
+        - skosType
+  - required:
+      - skosType
+    not:
+      required:
+        - memberList
+    properties:
+      skosType:
+        const: Collection
+      members:
+        $ref: bblocks://ogc.skos.concept#/$defs/conceptOrIdArray
+  - required:
+      - skosType
+    not:
+      required:
+        - members
+    properties:
+      skosType:
+        const: OrderedCollection
+        memberList:
+          $ref: bblocks://ogc.skos.concept#/$defs/conceptOrIdArray
