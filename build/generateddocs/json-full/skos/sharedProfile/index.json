@@ -19,9 +19,9 @@
     }
   ],
   "dependsOn": [
-    "ogc.skos.concept",
+    "ogc.skos.collection",
     "ogc.skos.conceptScheme",
-    "ogc.skos.collection"
+    "ogc.skos.concept"
   ],
   "tags": [
     "skos",
@@ -30,6 +30,9 @@
   "shaclRules": {
     "ogc.skos.common": [
       "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+    ],
+    "ogc.skos.concept": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
     ]
   },
   "sourceFiles": "https://ogcincubator.github.io/bblocks-skos/_sources/sharedProfile/",

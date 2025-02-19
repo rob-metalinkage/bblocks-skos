@@ -1,5 +1,5 @@
 Validation report for ogc.skos.common - Common SKOS properties
-Generated 2025-02-19T20:45:56.975933+00:00
+Generated 2025-02-19T20:52:29.552318+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -49,7 +49,7 @@ Validation result for _sources/common/rules.shacl:
   	Message: Only one prefLabel per language is allowed
   
 Focus nodes for _sources/common/rules.shacl:
- - Shape :singlePrefLabel: _:N74324f73010c4a1fbcaf68ade73dbb74
+ - Shape :singlePrefLabel: _:N836cabb198284209922b84cb87ce7388
 
 === End SHACL ===
 
