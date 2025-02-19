@@ -1,0 +1,31 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix sosa:    <http://www.w3.org/ns/sosa/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix :        <http://blocks.ogc.org/skos#> .
+
+:relatedDisjointWithBroaderTransitive
+    a                   sh:NodeShape ;
+    sh:targetSubjectsOf skos:related ;
+    sh:sparql [
+      sh:message          "skos:related is disjoint with skos:broaderTransitive" ;
+      sh:select """
+        prefix skos: <http://www.w3.org/2004/02/skos/core#>
+        SELECT $this (skos:related as ?path) ?target WHERE {
+          $this skos:related ?target .
+          { $this skos:broader ?target }
+          UNION
+          { $this skos:narrower ?target }
+          UNION
+          { $this skos:broaderTransitive ?target }
+          UNION
+          { $this skos:narrowerTransitive ?target }
+        }
+      """ ;
+    ] ;
+.
+
