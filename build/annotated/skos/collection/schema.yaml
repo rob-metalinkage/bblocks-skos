@@ -1,0 +1,46 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$defs:
+  collectionOrId:
+    oneOf:
+    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
+    - $ref: '#'
+  collectionOrIdArray:
+    oneOf:
+    - $ref: '#/$defs/collectionOrId'
+    - type: array
+      items:
+        $ref: '#/$defs/collectionOrId'
+type: object
+allOf:
+- $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/schema.yaml
+oneOf:
+- not:
+    required:
+    - skosType
+- required:
+  - skosType
+  not:
+    required:
+    - memberList
+  properties:
+    skosType:
+      const: Collection
+    members:
+      $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/concept/schema.yaml#/$defs/conceptOrIdArray
+      x-jsonld-id: skos:members
+      x-jsonld-type: '@id'
+- required:
+  - skosType
+  not:
+    required:
+    - members
+  properties:
+    skosType:
+      const: OrderedCollection
+      memberList:
+        $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/concept/schema.yaml#/$defs/conceptOrIdArray
+x-jsonld-extra-terms:
+  memberList:
+    x-jsonld-id: skos:memberList
+    x-jsonld-type: '@id'
+    x-jsonld-container: '@list'

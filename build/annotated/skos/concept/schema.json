@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "conceptOrId": {
+      "oneOf": [
+        {
+          "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json"
+        },
+        {
+          "$ref": "#"
+        }
+      ]
+    },
+    "conceptOrIdArray": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/conceptOrId"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/conceptOrId"
+          }
+        }
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "topConceptOf": {
+      "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/conceptScheme/schema.json#/$defs/conceptSchemeOrIdArray",
+      "x-jsonld-id": "skos:topConceptOf",
+      "x-jsonld-type": "@id"
+    },
+    "inScheme": {
+      "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/conceptScheme/schema.json#/$defs/conceptSchemeOrIdArray",
+      "x-jsonld-id": "skos:inScheme",
+      "x-jsonld-type": "@id"
+    },
+    "broaderConcepts": {
+      "$ref": "#/$defs/conceptOrIdArray",
+      "x-jsonld-id": "skos:broaderConcepts",
+      "x-jsonld-type": "@id"
+    },
+    "narrowerConcepts": {
+      "$ref": "#/$defs/conceptOrIdArray",
+      "x-jsonld-id": "skos:narrowerConcepts",
+      "x-jsonld-type": "@id"
+    },
+    "relatedConcepts": {
+      "$ref": "#/$defs/conceptOrIdArray",
+      "x-jsonld-id": "skos:relatedConcepts",
+      "x-jsonld-type": "@id"
+    },
+    "closeMatches": {
+      "$ref": "#/$defs/conceptOrIdArray",
+      "x-jsonld-id": "skos:closeMatches",
+      "x-jsonld-type": "@id"
+    },
+    "exactMatches": {
+      "$ref": "#/$defs/conceptOrIdArray",
+      "x-jsonld-id": "skos:exactMatches",
+      "x-jsonld-type": "@id"
+    },
+    "broadMatches": {
+      "$ref": "#/$defs/conceptOrIdArray",
+      "x-jsonld-id": "skos:broadMatches",
+      "x-jsonld-type": "@id"
+    },
+    "narrowMatches": {
+      "$ref": "#/$defs/conceptOrIdArray",
+      "x-jsonld-id": "skos:narrowMatches",
+      "x-jsonld-type": "@id"
+    },
+    "relatedMatches": {
+      "$ref": "#/$defs/conceptOrIdArray",
+      "x-jsonld-id": "skos:relatedMatches",
+      "x-jsonld-type": "@id"
+    },
+    "collections": {
+      "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/collection/schema.json#/$defs/collectionOrIdArray",
+      "x-jsonld-id": "skos:collections",
+      "x-jsonld-type": "@id"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/schema.json"
+    }
+  ],
+  "oneOf": [
+    {
+      "not": {
+        "required": [
+          "skosType"
+        ]
+      }
+    },
+    {
+      "required": [
+        "skosType"
+      ],
+      "properties": {
+        "skosType": {
+          "const": "Concept"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "@context": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/context.jsonld",
+  "prefLabel": {
+    "en": "This is a multilingual label",
+    "fr": "Ceci est une \u00e9tiquette multilingue"
+  }
+}

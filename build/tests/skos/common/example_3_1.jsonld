@@ -1,0 +1,10 @@
+{
+  "@context": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/context.jsonld",
+  "altLabel": [
+    "A label with no language",
+    {
+      "en": "Another one with English and Spanish values",
+      "es": "Otra con valores en ingl\u00e9s y espa\u00f1ol"
+    }
+  ]
+}

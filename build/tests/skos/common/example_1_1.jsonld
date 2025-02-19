@@ -1,0 +1,4 @@
+{
+  "@context": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/context.jsonld",
+  "prefLabel": "A single label"
+}

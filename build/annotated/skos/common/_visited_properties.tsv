@@ -1,0 +1,16 @@
+path	@id
+/id	@id
+/skosType	@type
+/prefLabel	http://www.w3.org/2004/02/skos/core#prefLabel
+/altLabel	http://www.w3.org/2004/02/skos/core#altLabel
+/hiddenLabel	
+/notation	http://www.w3.org/2004/02/skos/core#notation
+/notation/@value	
+/notation/@type	
+/note	http://www.w3.org/2004/02/skos/core#note
+/changeNote	http://www.w3.org/2004/02/skos/core#changeNote
+/definition	http://www.w3.org/2004/02/skos/core#definition
+/editorialNote	http://www.w3.org/2004/02/skos/core#editorialNote
+/example	http://www.w3.org/2004/02/skos/core#example
+/historyNote	http://www.w3.org/2004/02/skos/core#historyNote
+/scopeNote	http://www.w3.org/2004/02/skos/core#scopeNote

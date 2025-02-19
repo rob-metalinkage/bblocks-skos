@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "languageString": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "patternProperties": {
+            "^[A-Za-z]{1,8}(-[A-Za-z0-9]{1,8})*$": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "languageStringArray": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/languageString"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/languageString"
+          }
+        }
+      ]
+    },
+    "typedValue": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "required": [
+            "@value"
+          ],
+          "properties": {
+            "@value": {
+              "type": "string"
+            },
+            "@type": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json",
+      "x-jsonld-id": "@id"
+    },
+    "skosType": {
+      "enum": [
+        "Concept",
+        "ConceptScheme",
+        "Collection",
+        "OrderedCollection"
+      ],
+      "x-jsonld-id": "@type"
+    },
+    "prefLabel": {
+      "$ref": "#/$defs/languageString",
+      "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "x-jsonld-container": "@language"
+    },
+    "altLabel": {
+      "$ref": "#/$defs/languageStringArray",
+      "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "x-jsonld-container": "@language"
+    },
+    "hiddenLabel": {
+      "$ref": "#/$defs/languageStringArray"
+    },
+    "notation": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/typedValue"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/typedValue"
+          }
+        }
+      ],
+      "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#notation",
+      "x-jsonld-container": "@language"
+    },
+    "note": {
+      "$ref": "#/$defs/languageStringArray",
+      "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#note",
+      "x-jsonld-container": "@language"
+    },
+    "changeNote": {
+      "$ref": "#/$defs/languageStringArray",
+      "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#changeNote",
+      "x-jsonld-container": "@language"
+    },
+    "definition": {
+      "$ref": "#/$defs/languageStringArray",
+      "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#definition",
+      "x-jsonld-container": "@language"
+    },
+    "editorialNote": {
+      "$ref": "#/$defs/languageStringArray",
+      "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#editorialNote",
+      "x-jsonld-container": "@language"
+    },
+    "example": {
+      "$ref": "#/$defs/languageStringArray",
+      "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#example",
+      "x-jsonld-container": "@language"
+    },
+    "historyNote": {
+      "$ref": "#/$defs/languageStringArray",
+      "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#historyNote",
+      "x-jsonld-container": "@language"
+    },
+    "scopeNote": {
+      "$ref": "#/$defs/languageStringArray",
+      "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#scopeNote",
+      "x-jsonld-container": "@language"
+    }
+  },
+  "x-jsonld-extra-terms": {
+    "ConceptScheme": "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "Concept": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Collection": "http://www.w3.org/2004/02/skos/core#Collection",
+    "OrderedCollection": "http://www.w3.org/2004/02/skos/core#OrderedCollection"
+  },
+  "x-jsonld-prefixes": {
+    "skos": "http://www.w3.org/2004/02/skos/core#"
+  }
+}

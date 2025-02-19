@@ -1,0 +1,107 @@
+
+
+{
+  "itemIdentifier": "ogc.skos.common",
+  "name": "Common SKOS properties",
+  "abstract": "A generic SKOS object that can have labels and notes",
+  "highlighted": false,
+  "status": "under-development",
+  "dateTimeAddition": "2025-02-09T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc",
+  "version": "0.1",
+  "dateOfLastChange": "2025-02-19",
+  "sources": [
+    {
+      "title": "SKOS Reference",
+      "link": "https://www.w3.org/TR/skos-reference/"
+    }
+  ],
+  "tags": [
+    "skos",
+    "label",
+    "prefLabel",
+    "altLabel",
+    "hiddenLabel"
+  ],
+  "shaclRules": {},
+  "dependsOn": [
+    "ogc.ogc-utils.iri-or-curie"
+  ],
+  "ldContext": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/context.jsonld",
+  "schema": {
+    "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/schema.yaml",
+    "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/schema.json"
+  },
+  "sourceSchema": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/_sources/common/schema.yaml",
+  "sourceLdContext": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/_sources/common/context.jsonld",
+  "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/_sources/common/",
+  "rdfData": [],
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-skos/blob/master/build/tests/skos/common/",
+  "examples": [
+    {
+      "title": "Object with a single prefLabel",
+      "snippets": [
+        {
+          "language": "json",
+          "code": "{\n  \"prefLabel\": \"A single label\"\n}\n",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/context.jsonld\",\n  \"prefLabel\": \"A single label\"\n}",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\n[] skos:prefLabel \"A single label\" .\n\n",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_1_1.ttl"
+        }
+      ]
+    },
+    {
+      "title": "Object with prefLabel in two languages",
+      "snippets": [
+        {
+          "language": "json",
+          "code": "{\n  \"prefLabel\": {\n    \"en\": \"This is a multilingual label\",\n    \"fr\": \"Ceci est une \u00e9tiquette multilingue\"\n  }\n}\n",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_2_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/context.jsonld\",\n  \"prefLabel\": {\n    \"en\": \"This is a multilingual label\",\n    \"fr\": \"Ceci est une \\u00e9tiquette multilingue\"\n  }\n}",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_2_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\n[] skos:prefLabel \"This is a multilingual label\"@en,\n        \"Ceci est une \u00e9tiquette multilingue\"@fr .\n\n",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_2_1.ttl"
+        }
+      ]
+    },
+    {
+      "title": "Object with several altLabel's",
+      "snippets": [
+        {
+          "language": "json",
+          "code": "{\n  \"altLabel\": [\n    \"A label with no language\",\n    {\n      \"en\": \"Another one with English and Spanish values\",\n      \"es\": \"Otra con valores en ingl\u00e9s y espa\u00f1ol\"\n    }\n  ]\n}",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_3_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/context.jsonld\",\n  \"altLabel\": [\n    \"A label with no language\",\n    {\n      \"en\": \"Another one with English and Spanish values\",\n      \"es\": \"Otra con valores en ingl\\u00e9s y espa\\u00f1ol\"\n    }\n  ]\n}",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_3_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\n[] skos:altLabel [ ],\n        \"A label with no language\" .\n\n",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_3_1.ttl"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$defs:\n  languageString:\n    oneOf:\n    - type: string\n    - type: object\n      patternProperties:\n        ^[A-Za-z]{1,8}(-[A-Za-z0-9]{1,8})*$:\n          type: string\n      additionalProperties: false\n  languageStringArray:\n    oneOf:\n    - $ref: '#/$defs/languageString'\n    - type: array\n      items:\n        $ref: '#/$defs/languageString'\n  typedValue:\n    oneOf:\n    - type: string\n    - type: object\n      required:\n      - '@value'\n      properties:\n        '@value':\n          type: string\n        '@type':\n          type: string\ntype: object\nproperties:\n  id:\n    $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n    x-jsonld-id: '@id'\n  skosType:\n    enum:\n    - Concept\n    - ConceptScheme\n    - Collection\n    - OrderedCollection\n    x-jsonld-id: '@type'\n  prefLabel:\n    $ref: '#/$defs/languageString'\n    x-jsonld-id: http://www.w3.org/2004/02/skos/core#prefLabel\n    x-jsonld-container: '@language'\n  altLabel:\n    $ref: '#/$defs/languageStringArray'\n    x-jsonld-id: http://www.w3.org/2004/02/skos/core#altLabel\n    x-jsonld-container: '@language'\n  hiddenLabel:\n    $ref: '#/$defs/languageStringArray'\n  notation:\n    oneOf:\n    - $ref: '#/$defs/typedValue'\n    - type: array\n      items:\n        $ref: '#/$defs/typedValue'\n    x-jsonld-id: http://www.w3.org/2004/02/skos/core#notation\n    x-jsonld-container: '@language'\n  note:\n    $ref: '#/$defs/languageStringArray'\n    x-jsonld-id: http://www.w3.org/2004/02/skos/core#note\n    x-jsonld-container: '@language'\n  changeNote:\n    $ref: '#/$defs/languageStringArray'\n    x-jsonld-id: http://www.w3.org/2004/02/skos/core#changeNote\n    x-jsonld-container: '@language'\n  definition:\n    $ref: '#/$defs/languageStringArray'\n    x-jsonld-id: http://www.w3.org/2004/02/skos/core#definition\n    x-jsonld-container: '@language'\n  editorialNote:\n    $ref: '#/$defs/languageStringArray'\n    x-jsonld-id: http://www.w3.org/2004/02/skos/core#editorialNote\n    x-jsonld-container: '@language'\n  example:\n    $ref: '#/$defs/languageStringArray'\n    x-jsonld-id: http://www.w3.org/2004/02/skos/core#example\n    x-jsonld-container: '@language'\n  historyNote:\n    $ref: '#/$defs/languageStringArray'\n    x-jsonld-id: http://www.w3.org/2004/02/skos/core#historyNote\n    x-jsonld-container: '@language'\n  scopeNote:\n    $ref: '#/$defs/languageStringArray'\n    x-jsonld-id: http://www.w3.org/2004/02/skos/core#scopeNote\n    x-jsonld-container: '@language'\nx-jsonld-extra-terms:\n  ConceptScheme: http://www.w3.org/2004/02/skos/core#ConceptScheme\n  Concept: http://www.w3.org/2004/02/skos/core#Concept\n  Collection: http://www.w3.org/2004/02/skos/core#Collection\n  OrderedCollection: http://www.w3.org/2004/02/skos/core#OrderedCollection\nx-jsonld-prefixes:\n  skos: http://www.w3.org/2004/02/skos/core#\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-skos",
+  "gitPath": "_sources/common"
+}

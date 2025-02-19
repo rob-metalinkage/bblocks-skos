@@ -1,0 +1,156 @@
+@prefix bblocks: <https://www.opengis.net/def/bblocks/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://raw.githubusercontent.com/ogcincubator/bblocks-skos/ogc.skos.collection> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Schema ;
+    rdfs:label "SKOS Collection" ;
+    dct:abstract "A Collection as defined in SKOS" ;
+    dct:created "2025-02-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/bblock/ogc.skos.collection" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/generateddocs/markdown/skos/collection/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/generateddocs/json-full/skos/collection/index.json" ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-02-19"^^xsd:date ;
+    dct:source <https://www.w3.org/TR/skos-reference/> ;
+    skos:inScheme <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/> ;
+    dcat:keyword "collection",
+        "skos" ;
+    bblocks:dependsOn <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/ogc.ogc-utils.iri-or-curie>,
+        <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/ogc.skos.common>,
+        <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/ogc.skos.concept> ;
+    bblocks:hasJsonLdContext <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/collection/context.jsonld> ;
+    bblocks:hasSchema <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/collection/schema.json>,
+        <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/collection/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/_sources/collection/context.jsonld> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> .
+
+<https://raw.githubusercontent.com/ogcincubator/bblocks-skos/ogc.skos.conceptScheme> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Schema ;
+    rdfs:label "SKOS ConceptScheme" ;
+    dct:abstract "A Concept Scheme as defined in SKOS" ;
+    dct:created "2025-02-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/bblock/ogc.skos.conceptScheme" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/generateddocs/json-full/skos/conceptScheme/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/generateddocs/markdown/skos/conceptScheme/index.md" ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-02-19"^^xsd:date ;
+    dct:source <https://www.w3.org/TR/skos-reference/> ;
+    skos:inScheme <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/> ;
+    dcat:keyword "concept scheme",
+        "skos" ;
+    bblocks:dependsOn <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/ogc.ogc-utils.iri-or-curie>,
+        <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/ogc.skos.common>,
+        <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/ogc.skos.concept> ;
+    bblocks:hasJsonLdContext <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/conceptScheme/context.jsonld> ;
+    bblocks:hasSchema <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/conceptScheme/schema.json>,
+        <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/conceptScheme/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/_sources/conceptScheme/context.jsonld> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> .
+
+<https://raw.githubusercontent.com/ogcincubator/bblocks-skos/ogc.skos.concept> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Schema ;
+    rdfs:label "SKOS Concept" ;
+    dct:abstract "A Concept as defined in SKOS" ;
+    dct:created "2025-02-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/bblock/ogc.skos.concept" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/generateddocs/json-full/skos/concept/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/generateddocs/markdown/skos/concept/index.md" ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-02-19"^^xsd:date ;
+    dct:source <https://www.w3.org/TR/skos-reference/> ;
+    skos:inScheme <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/> ;
+    dcat:keyword "concept",
+        "skos" ;
+    bblocks:dependsOn <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/ogc.ogc-utils.iri-or-curie>,
+        <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/ogc.skos.collection>,
+        <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/ogc.skos.common>,
+        <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/ogc.skos.conceptScheme> ;
+    bblocks:hasJsonLdContext <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/concept/context.jsonld> ;
+    bblocks:hasSchema <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/concept/schema.json>,
+        <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/concept/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/_sources/concept/context.jsonld> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> .
+
+<https://raw.githubusercontent.com/ogcincubator/bblocks-skos/ogc.skos.common> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Schema ;
+    rdfs:label "Common SKOS properties" ;
+    dct:abstract "A generic SKOS object that can have labels and notes" ;
+    dct:created "2025-02-09T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/bblock/ogc.skos.common" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/generateddocs/markdown/skos/common/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/generateddocs/json-full/skos/common/index.json" ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2025-02-19"^^xsd:date ;
+    dct:source <https://www.w3.org/TR/skos-reference/> ;
+    skos:inScheme <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/> ;
+    dcat:keyword "altLabel",
+        "hiddenLabel",
+        "label",
+        "prefLabel",
+        "skos" ;
+    bblocks:dependsOn <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/ogc.ogc-utils.iri-or-curie> ;
+    bblocks:hasJsonLdContext <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/context.jsonld> ;
+    bblocks:hasSchema <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/schema.json>,
+        <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/schema.yaml> ;
+    bblocks:hasSourceJsonLdContext <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/_sources/common/context.jsonld> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> .
+
+<https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/> a skos:ConceptScheme,
+        dcat:Catalog ;
+    rdfs:label "Building Blocks - SKOS - Simple Knowledge Organization System" ;
+    dct:abstract """SKOS—Simple Knowledge Organization System—provides a model for expressing the basic structure and content of
+concept schemes such as thesauri, classification schemes, subject heading lists, taxonomies, folksonomies, and other similar types of controlled vocabulary.
+""" ;
+    dct:description """Many knowledge organization systems, such as thesauri, taxonomies, classification schemes and subject heading
+systems, share a similar structure, and are used in similar applications. SKOS captures much of this similarity
+and makes it explicit, to enable data and technology sharing across diverse applications.
+
+The SKOS data model provides a standard, low-cost migration path for porting existing knowledge organization systems 
+to the Semantic Web. SKOS also provides a lightweight, intuitive language for developing and sharing new knowledge
+organization systems. It may be used on its own, or in combination with formal knowledge representation languages
+such as the Web Ontology language (OWL).
+""" ;
+    skos:prefLabel "Building Blocks - SKOS - Simple Knowledge Organization System" ;
+    bblocks:hasValidationReport <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/report.html> ;
+    bblocks:imports <https://opengeospatial.github.io/bblocks/register.json> .
+
+<https://www.w3.org/TR/skos-reference/> rdfs:label "SKOS Reference" .
+
+[] a prov:Activity ;
+    prov:endedAtTime "2025-02-19T20:14:00.798914"^^xsd:dateTime ;
+    prov:startedAtTime "2025-02-19T20:14:00.736866"^^xsd:dateTime ;
+    prov:used [ a prov:Entity ;
+            dct:format "application/yaml" ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+        [ a prov:Entity ;
+            dct:format "application/json" ;
+            dct:hasVersion "git:5ff5c47570de63a255018b5bf72557f1ad6476cf" ;
+            rdfs:seeAlso <https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/register.json> ] ;
+    prov:wasAssociatedWith [ a prov:Agent,
+                schema:SoftwareApplication ;
+            rdfs:label "OGC-NA tools" ;
+            dct:hasVersion "0.3.57" ;
+            rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> ] .
+
