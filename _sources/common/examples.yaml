@@ -25,11 +25,9 @@ examples:
       - language: json
         code: |
           {
-            "altLabel": [
-              "A label with no language",
-              {
-                "en": "Another one with English and Spanish values",
-                "es": "Otra con valores en inglés y español"
-              }
-            ]
+            "altLabel": {
+              "": "A label with no language",
+              "en": ["Another one with two English and one Spanish values", "This is the second label"],
+              "es": "Otra con valores en inglés y español"
+            }
           }

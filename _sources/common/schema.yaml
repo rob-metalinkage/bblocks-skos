@@ -1,21 +1,32 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 
 $defs:
-  languageString:
+  languageStringSingle:
     oneOf:
       - type: string
       - type: object
         patternProperties:
-          '^[A-Za-z]{1,8}(-[A-Za-z0-9]{1,8})*$':
+          '^([A-Za-z]{1,8}(-[A-Za-z0-9]{1,8})*)?$':
             type: string
         additionalProperties: false
 
-  languageStringArray:
+  languageStringArrayObject:
+    type: object
+    patternProperties:
+      '^([A-Za-z]{1,8}(-[A-Za-z0-9]{1,8})*)?$':
+        oneOf:
+          - type: string
+          - type: array
+            items:
+              type: string
+    additionalProperties: false
+
+  languageStringMultiple:
     oneOf:
-      - $ref: '#/$defs/languageString'
+      - $ref: '#/$defs/languageStringArrayObject'
       - type: array
         items:
-          $ref: '#/$defs/languageString'
+          type: string
 
   typedValue:
     oneOf:
@@ -38,11 +49,11 @@ properties:
     enum: [Concept, ConceptScheme, Collection, OrderedCollection]
 
   prefLabel:
-    $ref: '#/$defs/languageString'
+    $ref: '#/$defs/languageStringSingle'
   altLabel:
-    $ref: '#/$defs/languageStringArray'
+    $ref: '#/$defs/languageStringMultiple'
   hiddenLabel:
-    $ref: '#/$defs/languageStringArray'
+    $ref: '#/$defs/languageStringMultiple'
 
   notation:
     oneOf:
@@ -52,16 +63,16 @@ properties:
           $ref: '#/$defs/typedValue'
 
   note:
-    $ref: '#/$defs/languageStringArray'
+    $ref: '#/$defs/languageStringMultiple'
   changeNote:
-    $ref: '#/$defs/languageStringArray'
+    $ref: '#/$defs/languageStringMultiple'
   definition:
-    $ref: '#/$defs/languageStringArray'
+    $ref: '#/$defs/languageStringMultiple'
   editorialNote:
-    $ref: '#/$defs/languageStringArray'
+    $ref: '#/$defs/languageStringMultiple'
   example:
-    $ref: '#/$defs/languageStringArray'
+    $ref: '#/$defs/languageStringMultiple'
   historyNote:
-    $ref: '#/$defs/languageStringArray'
+    $ref: '#/$defs/languageStringMultiple'
   scopeNote:
-    $ref: '#/$defs/languageStringArray'
+    $ref: '#/$defs/languageStringMultiple'
