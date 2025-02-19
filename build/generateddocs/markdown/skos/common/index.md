@@ -74,13 +74,11 @@ A generic SKOS object that can have labels and notes
 #### json
 ```json
 {
-  "altLabel": [
-    "A label with no language",
-    {
-      "en": "Another one with English and Spanish values",
-      "es": "Otra con valores en inglés y español"
-    }
-  ]
+  "altLabel": {
+    "": "A label with no language",
+    "en": ["Another one with two English and one Spanish values", "This is the second label"],
+    "es": "Otra con valores en inglés y español"
+  }
 }
 ```
 
@@ -88,13 +86,14 @@ A generic SKOS object that can have labels and notes
 ```jsonld
 {
   "@context": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld",
-  "altLabel": [
-    "A label with no language",
-    {
-      "en": "Another one with English and Spanish values",
-      "es": "Otra con valores en ingl\u00e9s y espa\u00f1ol"
-    }
-  ]
+  "altLabel": {
+    "": "A label with no language",
+    "en": [
+      "Another one with two English and one Spanish values",
+      "This is the second label"
+    ],
+    "es": "Otra con valores en ingl\u00e9s y espa\u00f1ol"
+  }
 }
 ```
 
@@ -102,8 +101,10 @@ A generic SKOS object that can have labels and notes
 ```ttl
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-[] skos:altLabel [ ],
-        "A label with no language" .
+[] skos:altLabel "A label with no language",
+        "Another one with two English and one Spanish values"@en,
+        "This is the second label"@en,
+        "Otra con valores en inglés y español"@es .
 
 
 ```
@@ -113,20 +114,30 @@ A generic SKOS object that can have labels and notes
 ```yaml
 $schema: https://json-schema.org/draft/2020-12/schema
 $defs:
-  languageString:
+  languageStringSingle:
     oneOf:
     - type: string
     - type: object
       patternProperties:
-        ^[A-Za-z]{1,8}(-[A-Za-z0-9]{1,8})*$:
+        ^([A-Za-z]{1,8}(-[A-Za-z0-9]{1,8})*)?$:
           type: string
       additionalProperties: false
-  languageStringArray:
+  languageStringArrayObject:
+    type: object
+    patternProperties:
+      ^([A-Za-z]{1,8}(-[A-Za-z0-9]{1,8})*)?$:
+        oneOf:
+        - type: string
+        - type: array
+          items:
+            type: string
+    additionalProperties: false
+  languageStringMultiple:
     oneOf:
-    - $ref: '#/$defs/languageString'
+    - $ref: '#/$defs/languageStringArrayObject'
     - type: array
       items:
-        $ref: '#/$defs/languageString'
+        type: string
   typedValue:
     oneOf:
     - type: string
@@ -151,15 +162,15 @@ properties:
     - OrderedCollection
     x-jsonld-id: '@type'
   prefLabel:
-    $ref: '#/$defs/languageString'
+    $ref: '#/$defs/languageStringSingle'
     x-jsonld-id: http://www.w3.org/2004/02/skos/core#prefLabel
     x-jsonld-container: '@language'
   altLabel:
-    $ref: '#/$defs/languageStringArray'
+    $ref: '#/$defs/languageStringMultiple'
     x-jsonld-id: http://www.w3.org/2004/02/skos/core#altLabel
     x-jsonld-container: '@language'
   hiddenLabel:
-    $ref: '#/$defs/languageStringArray'
+    $ref: '#/$defs/languageStringMultiple'
   notation:
     oneOf:
     - $ref: '#/$defs/typedValue'
@@ -169,31 +180,31 @@ properties:
     x-jsonld-id: http://www.w3.org/2004/02/skos/core#notation
     x-jsonld-container: '@language'
   note:
-    $ref: '#/$defs/languageStringArray'
+    $ref: '#/$defs/languageStringMultiple'
     x-jsonld-id: http://www.w3.org/2004/02/skos/core#note
     x-jsonld-container: '@language'
   changeNote:
-    $ref: '#/$defs/languageStringArray'
+    $ref: '#/$defs/languageStringMultiple'
     x-jsonld-id: http://www.w3.org/2004/02/skos/core#changeNote
     x-jsonld-container: '@language'
   definition:
-    $ref: '#/$defs/languageStringArray'
+    $ref: '#/$defs/languageStringMultiple'
     x-jsonld-id: http://www.w3.org/2004/02/skos/core#definition
     x-jsonld-container: '@language'
   editorialNote:
-    $ref: '#/$defs/languageStringArray'
+    $ref: '#/$defs/languageStringMultiple'
     x-jsonld-id: http://www.w3.org/2004/02/skos/core#editorialNote
     x-jsonld-container: '@language'
   example:
-    $ref: '#/$defs/languageStringArray'
+    $ref: '#/$defs/languageStringMultiple'
     x-jsonld-id: http://www.w3.org/2004/02/skos/core#example
     x-jsonld-container: '@language'
   historyNote:
-    $ref: '#/$defs/languageStringArray'
+    $ref: '#/$defs/languageStringMultiple'
     x-jsonld-id: http://www.w3.org/2004/02/skos/core#historyNote
     x-jsonld-container: '@language'
   scopeNote:
-    $ref: '#/$defs/languageStringArray'
+    $ref: '#/$defs/languageStringMultiple'
     x-jsonld-id: http://www.w3.org/2004/02/skos/core#scopeNote
     x-jsonld-container: '@language'
 x-jsonld-extra-terms:

@@ -13,12 +13,12 @@
     rdfs:label "SKOS Collection" ;
     dct:abstract "A Collection as defined in SKOS" ;
     dct:created "2025-02-09T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/collection/index.json" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/collection/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.collection" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.collection" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/collection/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-02-19"^^xsd:date ;
     dct:source <https://www.w3.org/TR/skos-reference/> ;
@@ -42,10 +42,10 @@
     dct:created "2025-02-09T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/conceptScheme/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/conceptScheme/index.json" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.conceptScheme" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.conceptScheme" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/conceptScheme/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-02-19"^^xsd:date ;
     dct:source <https://www.w3.org/TR/skos-reference/> ;
@@ -67,10 +67,10 @@
     rdfs:label "SKOS Concept" ;
     dct:abstract "A Concept as defined in SKOS" ;
     dct:created "2025-02-09T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/concept/index.json" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/markdown/skos/concept/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/build/generateddocs/json-full/skos/concept/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-skos/bblock/ogc.skos.concept" ] ;
     dct:hasVersion "0.1" ;
@@ -139,14 +139,14 @@ such as the Web Ontology language (OWL).
 <https://www.w3.org/TR/skos-reference/> rdfs:label "SKOS Reference" .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-02-19T20:16:04.689309"^^xsd:dateTime ;
-    prov:startedAtTime "2025-02-19T20:16:04.627262"^^xsd:dateTime ;
+    prov:endedAtTime "2025-02-19T20:26:03.585512"^^xsd:dateTime ;
+    prov:startedAtTime "2025-02-19T20:26:03.524590"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/yaml" ;
             rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
         [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:a63e60610466b50e90d2245d1b286f0efc9a807f" ;
+            dct:hasVersion "git:6b71415ecf6c05fe6968e6cecd8b25ddfaadd958" ;
             rdfs:seeAlso <https://ogcincubator.github.io/bblocks-skos/build/register.json> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;

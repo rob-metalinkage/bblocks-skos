@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
-    "languageString": {
+    "languageStringSingle": {
       "oneOf": [
         {
           "type": "string"
@@ -9,7 +9,7 @@
         {
           "type": "object",
           "patternProperties": {
-            "^[A-Za-z]{1,8}(-[A-Za-z0-9]{1,8})*$": {
+            "^([A-Za-z]{1,8}(-[A-Za-z0-9]{1,8})*)?$": {
               "type": "string"
             }
           },
@@ -17,15 +17,34 @@
         }
       ]
     },
-    "languageStringArray": {
+    "languageStringArrayObject": {
+      "type": "object",
+      "patternProperties": {
+        "^([A-Za-z]{1,8}(-[A-Za-z0-9]{1,8})*)?$": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "languageStringMultiple": {
       "oneOf": [
         {
-          "$ref": "#/$defs/languageString"
+          "$ref": "#/$defs/languageStringArrayObject"
         },
         {
           "type": "array",
           "items": {
-            "$ref": "#/$defs/languageString"
+            "type": "string"
           }
         }
       ]
@@ -68,17 +87,17 @@
       "x-jsonld-id": "@type"
     },
     "prefLabel": {
-      "$ref": "#/$defs/languageString",
+      "$ref": "#/$defs/languageStringSingle",
       "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#prefLabel",
       "x-jsonld-container": "@language"
     },
     "altLabel": {
-      "$ref": "#/$defs/languageStringArray",
+      "$ref": "#/$defs/languageStringMultiple",
       "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#altLabel",
       "x-jsonld-container": "@language"
     },
     "hiddenLabel": {
-      "$ref": "#/$defs/languageStringArray"
+      "$ref": "#/$defs/languageStringMultiple"
     },
     "notation": {
       "oneOf": [
@@ -96,37 +115,37 @@
       "x-jsonld-container": "@language"
     },
     "note": {
-      "$ref": "#/$defs/languageStringArray",
+      "$ref": "#/$defs/languageStringMultiple",
       "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#note",
       "x-jsonld-container": "@language"
     },
     "changeNote": {
-      "$ref": "#/$defs/languageStringArray",
+      "$ref": "#/$defs/languageStringMultiple",
       "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#changeNote",
       "x-jsonld-container": "@language"
     },
     "definition": {
-      "$ref": "#/$defs/languageStringArray",
+      "$ref": "#/$defs/languageStringMultiple",
       "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#definition",
       "x-jsonld-container": "@language"
     },
     "editorialNote": {
-      "$ref": "#/$defs/languageStringArray",
+      "$ref": "#/$defs/languageStringMultiple",
       "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#editorialNote",
       "x-jsonld-container": "@language"
     },
     "example": {
-      "$ref": "#/$defs/languageStringArray",
+      "$ref": "#/$defs/languageStringMultiple",
       "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#example",
       "x-jsonld-container": "@language"
     },
     "historyNote": {
-      "$ref": "#/$defs/languageStringArray",
+      "$ref": "#/$defs/languageStringMultiple",
       "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#historyNote",
       "x-jsonld-container": "@language"
     },
     "scopeNote": {
-      "$ref": "#/$defs/languageStringArray",
+      "$ref": "#/$defs/languageStringMultiple",
       "x-jsonld-id": "http://www.w3.org/2004/02/skos/core#scopeNote",
       "x-jsonld-container": "@language"
     }

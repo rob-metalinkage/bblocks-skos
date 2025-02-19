@@ -1,5 +1,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-[] skos:altLabel [ ],
-        "A label with no language" .
+[] skos:altLabel "A label with no language",
+        "Another one with two English and one Spanish values"@en,
+        "This is the second label"@en,
+        "Otra con valores en inglés y español"@es .
 
