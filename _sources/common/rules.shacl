@@ -1,0 +1,28 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix sosa:    <http://www.w3.org/ns/sosa/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix :        <http://blocks.ogc.org/skos#> .
+
+:singlePrefLabel
+    a                   sh:NodeShape ;
+    sh:targetSubjectsOf skos:prefLabel ;
+    sh:sparql [
+      sh:message          "Only one prefLabel per language is allowed" ;
+      sh:select """
+        prefix skos: <http://www.w3.org/2004/02/skos/core#>
+        SELECT $this (skos:prefLabel as ?path) (?lang as ?value) WHERE {
+          $this skos:prefLabel ?label .
+          BIND(LANG(?label) as ?lang)
+        }
+        GROUP BY ?lang
+        HAVING (COUNT(?label) > 1)
+        LIMIT 1
+      """ ;
+    ] ;
+.
+

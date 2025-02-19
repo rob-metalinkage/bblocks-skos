@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/bblock.schema.yaml?",
+  "name": "SKOS Shared Profile",
+  "abstract": "A shared SKOS profile with validation shapes",
+  "highlighted": true,
+  "status": "under-development",
+  "dateTimeAddition": "2025-02-09T00:00:00Z",
+  "itemClass": "model",
+  "register": "ogc",
+  "version": "0.1",
+  "dateOfLastChange": "2025-02-19",
+  "sources": [
+    {
+      "title": "SKOS Reference",
+      "link": "https://www.w3.org/TR/skos-reference/"
+    }
+  ],
+  "dependsOn": [
+    "ogc.skos.concept",
+    "ogc.skos.conceptScheme",
+    "ogc.skos.collection"
+  ],
+  "tags": ["skos", "profile"]
+}
