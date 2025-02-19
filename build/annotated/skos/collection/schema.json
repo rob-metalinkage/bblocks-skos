@@ -28,7 +28,7 @@
   "type": "object",
   "allOf": [
     {
-      "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/schema.json"
+      "$ref": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/schema.json"
     }
   ],
   "oneOf": [
@@ -53,7 +53,7 @@
           "const": "Collection"
         },
         "members": {
-          "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/concept/schema.json#/$defs/conceptOrIdArray",
+          "$ref": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/schema.json#/$defs/conceptOrIdArray",
           "x-jsonld-id": "skos:members",
           "x-jsonld-type": "@id"
         }
@@ -72,7 +72,7 @@
         "skosType": {
           "const": "OrderedCollection",
           "memberList": {
-            "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/concept/schema.json#/$defs/conceptOrIdArray"
+            "$ref": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/schema.json#/$defs/conceptOrIdArray"
           }
         }
       }

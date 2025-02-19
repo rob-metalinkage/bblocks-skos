@@ -28,14 +28,14 @@
   "dependsOn": [
     "ogc.ogc-utils.iri-or-curie"
   ],
-  "ldContext": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/context.jsonld",
+  "ldContext": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld",
   "schema": {
-    "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/schema.yaml",
-    "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/schema.json"
+    "application/yaml": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/schema.json"
   },
-  "sourceSchema": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/_sources/common/schema.yaml",
-  "sourceLdContext": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/_sources/common/context.jsonld",
-  "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/_sources/common/",
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-skos/_sources/common/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-skos/_sources/common/context.jsonld",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-skos/_sources/common/",
   "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/bblocks-skos/blob/master/build/tests/skos/common/",
@@ -46,17 +46,17 @@
         {
           "language": "json",
           "code": "{\n  \"prefLabel\": \"A single label\"\n}\n",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_1_1.json"
+          "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/common/example_1_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/context.jsonld\",\n  \"prefLabel\": \"A single label\"\n}",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_1_1.jsonld"
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld\",\n  \"prefLabel\": \"A single label\"\n}",
+          "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/common/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\n[] skos:prefLabel \"A single label\" .\n\n",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_1_1.ttl"
+          "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/common/example_1_1.ttl"
         }
       ]
     },
@@ -66,17 +66,17 @@
         {
           "language": "json",
           "code": "{\n  \"prefLabel\": {\n    \"en\": \"This is a multilingual label\",\n    \"fr\": \"Ceci est une \u00e9tiquette multilingue\"\n  }\n}\n",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_2_1.json"
+          "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/common/example_2_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/context.jsonld\",\n  \"prefLabel\": {\n    \"en\": \"This is a multilingual label\",\n    \"fr\": \"Ceci est une \\u00e9tiquette multilingue\"\n  }\n}",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_2_1.jsonld"
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld\",\n  \"prefLabel\": {\n    \"en\": \"This is a multilingual label\",\n    \"fr\": \"Ceci est une \\u00e9tiquette multilingue\"\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/common/example_2_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\n[] skos:prefLabel \"This is a multilingual label\"@en,\n        \"Ceci est une \u00e9tiquette multilingue\"@fr .\n\n",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_2_1.ttl"
+          "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/common/example_2_1.ttl"
         }
       ]
     },
@@ -86,17 +86,17 @@
         {
           "language": "json",
           "code": "{\n  \"altLabel\": [\n    \"A label with no language\",\n    {\n      \"en\": \"Another one with English and Spanish values\",\n      \"es\": \"Otra con valores en ingl\u00e9s y espa\u00f1ol\"\n    }\n  ]\n}",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_3_1.json"
+          "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/common/example_3_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": \"https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/context.jsonld\",\n  \"altLabel\": [\n    \"A label with no language\",\n    {\n      \"en\": \"Another one with English and Spanish values\",\n      \"es\": \"Otra con valores en ingl\\u00e9s y espa\\u00f1ol\"\n    }\n  ]\n}",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_3_1.jsonld"
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld\",\n  \"altLabel\": [\n    \"A label with no language\",\n    {\n      \"en\": \"Another one with English and Spanish values\",\n      \"es\": \"Otra con valores en ingl\\u00e9s y espa\\u00f1ol\"\n    }\n  ]\n}",
+          "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/common/example_3_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n\n[] skos:altLabel [ ],\n        \"A label with no language\" .\n\n",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_3_1.ttl"
+          "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/common/example_3_1.ttl"
         }
       ]
     }

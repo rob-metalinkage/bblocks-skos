@@ -15,15 +15,15 @@ properties:
   id:
     $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
   concepts:
-    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/concept/schema.yaml#/$defs/conceptOrIdArray
+    $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/schema.yaml#/$defs/conceptOrIdArray
     x-jsonld-reverse: skos:inScheme
     x-jsonld-type: '@id'
   topConcepts:
-    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/concept/schema.yaml#/$defs/conceptOrIdArray
+    $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/schema.yaml#/$defs/conceptOrIdArray
     x-jsonld-id: skos:hasTopConcept
     x-jsonld-type: '@id'
 allOf:
-- $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/schema.yaml
+- $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/schema.yaml
 oneOf:
 - not:
     required:

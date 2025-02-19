@@ -27,15 +27,15 @@ properties:
   id:
     $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml
   concepts:
-    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/concept/schema.yaml#/$defs/conceptOrIdArray
+    $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/schema.yaml#/$defs/conceptOrIdArray
     x-jsonld-reverse: skos:inScheme
     x-jsonld-type: '@id'
   topConcepts:
-    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/concept/schema.yaml#/$defs/conceptOrIdArray
+    $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/schema.yaml#/$defs/conceptOrIdArray
     x-jsonld-id: skos:hasTopConcept
     x-jsonld-type: '@id'
 allOf:
-- $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/schema.yaml
+- $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/schema.yaml
 oneOf:
 - not:
     required:
@@ -50,8 +50,8 @@ oneOf:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/conceptScheme/schema.json)
-* JSON version: [schema.json](https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/conceptScheme/schema.yaml)
+* YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/schema.json)
+* JSON version: [schema.json](https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/schema.yaml)
 
 
 # JSON-LD Context
@@ -217,7 +217,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/conceptScheme/context.jsonld)
+[context.jsonld](https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/context.jsonld)
 
 ## Sources
 

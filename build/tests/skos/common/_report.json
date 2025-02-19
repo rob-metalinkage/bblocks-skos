@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.skos.common - Common SKOS properties",
   "bblockName": "Common SKOS properties",
   "bblockId": "ogc.skos.common",
-  "generated": "2025-02-19T20:14:00.686755+00:00",
+  "generated": "2025-02-19T20:16:04.578941+00:00",
   "result": true,
   "items": [
     {
@@ -10,7 +10,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/skos/common/example_1_1.json",
-        "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_1_1.json",
+        "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/common/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "application/json"
@@ -65,7 +65,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/skos/common/example_2_1.json",
-        "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_2_1.json",
+        "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/common/example_2_1.json",
         "exampleIndex": 2,
         "snippetIndex": 1,
         "language": "application/json"
@@ -120,7 +120,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/skos/common/example_3_1.json",
-        "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/tests/skos/common/example_3_1.json",
+        "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/common/example_3_1.json",
         "exampleIndex": 3,
         "snippetIndex": 1,
         "language": "application/json"

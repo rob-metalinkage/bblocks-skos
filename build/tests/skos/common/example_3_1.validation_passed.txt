@@ -1,5 +1,5 @@
 Validation report for ogc.skos.common - Common SKOS properties
-Generated 2025-02-19T20:14:00.686708+00:00
+Generated 2025-02-19T20:16:04.578894+00:00
 === Files ===
 Using example_3_1.json from examples
 JSON-LD context is present - uplifting

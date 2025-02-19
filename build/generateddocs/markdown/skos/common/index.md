@@ -21,7 +21,7 @@ A generic SKOS object that can have labels and notes
 #### jsonld
 ```jsonld
 {
-  "@context": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/context.jsonld",
+  "@context": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld",
   "prefLabel": "A single label"
 }
 ```
@@ -51,7 +51,7 @@ A generic SKOS object that can have labels and notes
 #### jsonld
 ```jsonld
 {
-  "@context": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/context.jsonld",
+  "@context": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld",
   "prefLabel": {
     "en": "This is a multilingual label",
     "fr": "Ceci est une \u00e9tiquette multilingue"
@@ -87,7 +87,7 @@ A generic SKOS object that can have labels and notes
 #### jsonld
 ```jsonld
 {
-  "@context": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/context.jsonld",
+  "@context": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld",
   "altLabel": [
     "A label with no language",
     {
@@ -208,8 +208,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/schema.json)
-* JSON version: [schema.json](https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/schema.yaml)
+* YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/schema.json)
+* JSON version: [schema.json](https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/schema.yaml)
 
 
 # JSON-LD Context
@@ -270,7 +270,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/context.jsonld)
+[context.jsonld](https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld)
 
 ## Sources
 

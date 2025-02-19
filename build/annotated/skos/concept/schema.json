@@ -28,12 +28,12 @@
   "type": "object",
   "properties": {
     "topConceptOf": {
-      "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/conceptScheme/schema.json#/$defs/conceptSchemeOrIdArray",
+      "$ref": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/schema.json#/$defs/conceptSchemeOrIdArray",
       "x-jsonld-id": "skos:topConceptOf",
       "x-jsonld-type": "@id"
     },
     "inScheme": {
-      "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/conceptScheme/schema.json#/$defs/conceptSchemeOrIdArray",
+      "$ref": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/schema.json#/$defs/conceptSchemeOrIdArray",
       "x-jsonld-id": "skos:inScheme",
       "x-jsonld-type": "@id"
     },
@@ -78,14 +78,14 @@
       "x-jsonld-type": "@id"
     },
     "collections": {
-      "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/collection/schema.json#/$defs/collectionOrIdArray",
+      "$ref": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/collection/schema.json#/$defs/collectionOrIdArray",
       "x-jsonld-id": "skos:collections",
       "x-jsonld-type": "@id"
     }
   },
   "allOf": [
     {
-      "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/schema.json"
+      "$ref": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/schema.json"
     }
   ],
   "oneOf": [

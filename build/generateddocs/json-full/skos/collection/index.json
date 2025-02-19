@@ -27,17 +27,17 @@
     "ogc.skos.common",
     "ogc.ogc-utils.iri-or-curie"
   ],
-  "ldContext": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/collection/context.jsonld",
+  "ldContext": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/collection/context.jsonld",
   "schema": {
-    "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/collection/schema.yaml",
-    "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/collection/schema.json"
+    "application/yaml": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/collection/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/collection/schema.json"
   },
-  "sourceSchema": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/_sources/collection/schema.yaml",
-  "sourceLdContext": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/_sources/collection/context.jsonld",
-  "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/_sources/collection/",
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-skos/_sources/collection/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-skos/_sources/collection/context.jsonld",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-skos/_sources/collection/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$defs:\n  collectionOrId:\n    oneOf:\n    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n    - $ref: '#'\n  collectionOrIdArray:\n    oneOf:\n    - $ref: '#/$defs/collectionOrId'\n    - type: array\n      items:\n        $ref: '#/$defs/collectionOrId'\ntype: object\nallOf:\n- $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/common/schema.yaml\noneOf:\n- not:\n    required:\n    - skosType\n- required:\n  - skosType\n  not:\n    required:\n    - memberList\n  properties:\n    skosType:\n      const: Collection\n    members:\n      $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/concept/schema.yaml#/$defs/conceptOrIdArray\n      x-jsonld-id: skos:members\n      x-jsonld-type: '@id'\n- required:\n  - skosType\n  not:\n    required:\n    - members\n  properties:\n    skosType:\n      const: OrderedCollection\n      memberList:\n        $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-skos/undefined/build/annotated/skos/concept/schema.yaml#/$defs/conceptOrIdArray\nx-jsonld-extra-terms:\n  memberList:\n    x-jsonld-id: skos:memberList\n    x-jsonld-type: '@id'\n    x-jsonld-container: '@list'\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$defs:\n  collectionOrId:\n    oneOf:\n    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n    - $ref: '#'\n  collectionOrIdArray:\n    oneOf:\n    - $ref: '#/$defs/collectionOrId'\n    - type: array\n      items:\n        $ref: '#/$defs/collectionOrId'\ntype: object\nallOf:\n- $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/schema.yaml\noneOf:\n- not:\n    required:\n    - skosType\n- required:\n  - skosType\n  not:\n    required:\n    - memberList\n  properties:\n    skosType:\n      const: Collection\n    members:\n      $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/schema.yaml#/$defs/conceptOrIdArray\n      x-jsonld-id: skos:members\n      x-jsonld-type: '@id'\n- required:\n  - skosType\n  not:\n    required:\n    - members\n  properties:\n    skosType:\n      const: OrderedCollection\n      memberList:\n        $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/schema.yaml#/$defs/conceptOrIdArray\nx-jsonld-extra-terms:\n  memberList:\n    x-jsonld-id: skos:memberList\n    x-jsonld-type: '@id'\n    x-jsonld-container: '@list'\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-skos",
   "gitPath": "_sources/collection"
 }
