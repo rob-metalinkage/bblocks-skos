@@ -1,5 +1,5 @@
 Validation report for ogc.skos.concept - SKOS Concept
-Generated 2025-02-19T20:52:29.626189+00:00
+Generated 2025-04-17T00:48:47.155867+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -37,7 +37,7 @@ Validation result for _sources/concept/rules.shacl:
   	Message: skos:related is disjoint with skos:broaderTransitive
   
 Focus nodes for _sources/concept/rules.shacl:
- - Shape :relatedDisjointWithBroaderTransitive: _:n2759b65a156b4090a4f6bf1ebc6d041db1
+ - Shape :relatedDisjointWithBroaderTransitive: _:n8b175336b88a4e4492d44b113f856ef5b1
 
 Validation result for _sources/common/rules.shacl:
   Validation Report

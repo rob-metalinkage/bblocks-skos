@@ -22,29 +22,29 @@
     "concept scheme"
   ],
   "shaclRules": {
-    "ogc.skos.common": [
-      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
-    ],
     "ogc.skos.concept": [
-      "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+      "https://rob-metalinkage.github.io/bblocks-skos/_sources/concept/rules.shacl"
+    ],
+    "ogc.skos.common": [
+      "https://rob-metalinkage.github.io/bblocks-skos/_sources/common/rules.shacl"
     ]
   },
   "dependsOn": [
-    "ogc.skos.common",
+    "ogc.ogc-utils.iri-or-curie",
     "ogc.skos.concept",
-    "ogc.ogc-utils.iri-or-curie"
+    "ogc.skos.common"
   ],
-  "ldContext": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/context.jsonld",
+  "ldContext": "https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/conceptScheme/context.jsonld",
   "schema": {
-    "application/yaml": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/schema.yaml",
-    "application/json": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/schema.json"
+    "application/yaml": "https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/conceptScheme/schema.yaml",
+    "application/json": "https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/conceptScheme/schema.json"
   },
-  "sourceSchema": "https://ogcincubator.github.io/bblocks-skos/_sources/conceptScheme/schema.yaml",
-  "sourceLdContext": "https://ogcincubator.github.io/bblocks-skos/_sources/conceptScheme/context.jsonld",
-  "sourceFiles": "https://ogcincubator.github.io/bblocks-skos/_sources/conceptScheme/",
+  "sourceSchema": "https://rob-metalinkage.github.io/bblocks-skos/_sources/conceptScheme/schema.yaml",
+  "sourceLdContext": "https://rob-metalinkage.github.io/bblocks-skos/_sources/conceptScheme/context.jsonld",
+  "sourceFiles": "https://rob-metalinkage.github.io/bblocks-skos/_sources/conceptScheme/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$defs:\n  conceptSchemeOrId:\n    oneOf:\n    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n    - $ref: '#'\n  conceptSchemeOrIdArray:\n    oneOf:\n    - $ref: '#/$defs/conceptSchemeOrId'\n    - type: array\n      items:\n        $ref: '#/$defs/conceptSchemeOrId'\ntype: object\nproperties:\n  id:\n    $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n  concepts:\n    $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/schema.yaml#/$defs/conceptOrIdArray\n    x-jsonld-reverse: skos:inScheme\n    x-jsonld-type: '@id'\n  topConcepts:\n    $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/schema.yaml#/$defs/conceptOrIdArray\n    x-jsonld-id: skos:hasTopConcept\n    x-jsonld-type: '@id'\nallOf:\n- $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/schema.yaml\noneOf:\n- not:\n    required:\n    - skosType\n- required:\n  - skosType\n  properties:\n    skosType:\n      const: ConceptScheme\n",
-  "gitRepository": "https://github.com/ogcincubator/bblocks-skos",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$defs:\n  conceptSchemeOrId:\n    oneOf:\n    - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n    - $ref: '#'\n  conceptSchemeOrIdArray:\n    oneOf:\n    - $ref: '#/$defs/conceptSchemeOrId'\n    - type: array\n      items:\n        $ref: '#/$defs/conceptSchemeOrId'\ntype: object\nproperties:\n  id:\n    $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.yaml\n  concepts:\n    $ref: https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/concept/schema.yaml#/$defs/conceptOrIdArray\n    x-jsonld-reverse: skos:inScheme\n    x-jsonld-type: '@id'\n  topConcepts:\n    $ref: https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/concept/schema.yaml#/$defs/conceptOrIdArray\n    x-jsonld-id: skos:hasTopConcept\n    x-jsonld-type: '@id'\nallOf:\n- $ref: https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/common/schema.yaml\noneOf:\n- not:\n    required:\n    - skosType\n- required:\n  - skosType\n  properties:\n    skosType:\n      const: ConceptScheme\n",
+  "gitRepository": "https://github.com/rob-metalinkage/bblocks-skos",
   "gitPath": "_sources/conceptScheme"
 }

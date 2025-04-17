@@ -1,5 +1,5 @@
 {
-  "@context": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld",
+  "@context": "https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld",
   "prefLabel": [
     "one",
     "two"

@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.skos.concept - SKOS Concept",
   "bblockName": "SKOS Concept",
   "bblockId": "ogc.skos.concept",
-  "generated": "2025-02-19T20:52:29.626265+00:00",
+  "generated": "2025-04-17T00:48:47.155963+00:00",
   "result": true,
   "items": [
     {
@@ -10,7 +10,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": true,
         "filename": "_sources/concept/tests/related-fail.ttl",
-        "url": "https://ogcincubator.github.io/bblocks-skos/_sources/concept/tests/related-fail.ttl",
+        "url": "https://rob-metalinkage.github.io/bblocks-skos/_sources/concept/tests/related-fail.ttl",
         "language": "ttl"
       },
       "result": true,
@@ -43,7 +43,7 @@
             {
               "op": "shacl-report",
               "shaclFile": "_sources/concept/rules.shacl",
-              "graph": "@prefix : <http://blocks.ogc.org/skos#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode _:n2759b65a156b4090a4f6bf1ebc6d041db1 ;\n            sh:resultMessage \"skos:related is disjoint with skos:broaderTransitive\" ;\n            sh:resultPath skos:related ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint [ sh:message \"skos:related is disjoint with skos:broaderTransitive\" ;\n                    sh:select \"\"\"\n        prefix skos: <http://www.w3.org/2004/02/skos/core#>\n        SELECT $this (skos:related as ?path) ?target WHERE {\n          $this skos:related ?target .\n          { $this skos:broader ?target }\n          UNION\n          { $this skos:narrower ?target }\n          UNION\n          { $this skos:broaderTransitive ?target }\n          UNION\n          { $this skos:narrowerTransitive ?target }\n        }\n      \"\"\" ] ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape :relatedDisjointWithBroaderTransitive ;\n            sh:value _:n2759b65a156b4090a4f6bf1ebc6d041db1 ] .\n\n_:n2759b65a156b4090a4f6bf1ebc6d041db1 skos:broader [ ] ;\n    skos:related [ ] .\n\n",
+              "graph": "@prefix : <http://blocks.ogc.org/skos#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode _:n8b175336b88a4e4492d44b113f856ef5b1 ;\n            sh:resultMessage \"skos:related is disjoint with skos:broaderTransitive\" ;\n            sh:resultPath skos:related ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint [ sh:message \"skos:related is disjoint with skos:broaderTransitive\" ;\n                    sh:select \"\"\"\n        prefix skos: <http://www.w3.org/2004/02/skos/core#>\n        SELECT $this (skos:related as ?path) ?target WHERE {\n          $this skos:related ?target .\n          { $this skos:broader ?target }\n          UNION\n          { $this skos:narrower ?target }\n          UNION\n          { $this skos:broaderTransitive ?target }\n          UNION\n          { $this skos:narrowerTransitive ?target }\n        }\n      \"\"\" ] ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape :relatedDisjointWithBroaderTransitive ;\n            sh:value _:n8b175336b88a4e4492d44b113f856ef5b1 ] .\n\n_:n8b175336b88a4e4492d44b113f856ef5b1 skos:broader [ ] ;\n    skos:related [ ] .\n\n",
               "isError": true,
               "message": "Validation result for _sources/concept/rules.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: :relatedDisjointWithBroaderTransitive\n  \tFocus Node: [ skos:broader [ ] ; skos:related [ ] ]\n  \tValue Node: [ skos:broader [ ] ; skos:related [ ] ]\n  \tResult Path: skos:related\n  \tSource Constraint: [ sh:message Literal(\"skos:related is disjoint with skos:broaderTransitive\") ; sh:select Literal(\"\n          prefix skos: <http://www.w3.org/2004/02/skos/core#>\n          SELECT $this (skos:related as ?path) ?target WHERE {\n            $this skos:related ?target .\n            { $this skos:broader ?target }\n            UNION\n            { $this skos:narrower ?target }\n            UNION\n            { $this skos:broaderTransitive ?target }\n            UNION\n            { $this skos:narrowerTransitive ?target }\n          }\n        \") ]\n  \tMessage: skos:related is disjoint with skos:broaderTransitive\n  "
             },
@@ -52,12 +52,12 @@
               "focusNodes": {
                 ":relatedDisjointWithBroaderTransitive": {
                   "nodes": [
-                    "_:n2759b65a156b4090a4f6bf1ebc6d041db1"
+                    "_:n8b175336b88a4e4492d44b113f856ef5b1"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/concept/rules.shacl:\n - Shape :relatedDisjointWithBroaderTransitive: _:n2759b65a156b4090a4f6bf1ebc6d041db1\n"
+              "message": "Focus nodes for _sources/concept/rules.shacl:\n - Shape :relatedDisjointWithBroaderTransitive: _:n8b175336b88a4e4492d44b113f856ef5b1\n"
             },
             {
               "op": "shacl-report",

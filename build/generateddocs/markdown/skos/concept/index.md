@@ -25,11 +25,11 @@ $defs:
 type: object
 properties:
   topConceptOf:
-    $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/schema.yaml#/$defs/conceptSchemeOrIdArray
+    $ref: https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/conceptScheme/schema.yaml#/$defs/conceptSchemeOrIdArray
     x-jsonld-id: skos:topConceptOf
     x-jsonld-type: '@id'
   inScheme:
-    $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/schema.yaml#/$defs/conceptSchemeOrIdArray
+    $ref: https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/conceptScheme/schema.yaml#/$defs/conceptSchemeOrIdArray
     x-jsonld-id: skos:inScheme
     x-jsonld-type: '@id'
   broaderConcepts:
@@ -65,11 +65,11 @@ properties:
     x-jsonld-id: skos:relatedMatches
     x-jsonld-type: '@id'
   collections:
-    $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/collection/schema.yaml#/$defs/collectionOrIdArray
+    $ref: https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/collection/schema.yaml#/$defs/collectionOrIdArray
     x-jsonld-id: skos:collections
     x-jsonld-type: '@id'
 allOf:
-- $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/schema.yaml
+- $ref: https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/common/schema.yaml
 oneOf:
 - not:
     required:
@@ -84,8 +84,8 @@ oneOf:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/schema.json)
-* JSON version: [schema.json](https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/schema.yaml)
+* YAML version: [schema.yaml](https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/concept/schema.json)
+* JSON version: [schema.json](https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/concept/schema.yaml)
 
 
 # JSON-LD Context
@@ -215,7 +215,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/context.jsonld)
+[context.jsonld](https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/concept/context.jsonld)
 
 ## Sources
 
@@ -225,6 +225,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/ogcincubator/bblocks-skos](https://github.com/ogcincubator/bblocks-skos)
+* URL: [https://github.com/rob-metalinkage/bblocks-skos](https://github.com/rob-metalinkage/bblocks-skos)
 * Path: `_sources/concept`
 

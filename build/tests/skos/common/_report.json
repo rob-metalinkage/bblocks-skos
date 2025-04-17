@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.skos.common - Common SKOS properties",
   "bblockName": "Common SKOS properties",
   "bblockId": "ogc.skos.common",
-  "generated": "2025-02-19T20:52:29.598789+00:00",
+  "generated": "2025-04-17T00:48:47.113790+00:00",
   "result": true,
   "items": [
     {
@@ -10,7 +10,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": true,
         "filename": "_sources/common/tests/single-prefLabel-fail.json",
-        "url": "https://ogcincubator.github.io/bblocks-skos/_sources/common/tests/single-prefLabel-fail.json",
+        "url": "https://rob-metalinkage.github.io/bblocks-skos/_sources/common/tests/single-prefLabel-fail.json",
         "language": "json"
       },
       "result": true,
@@ -85,12 +85,12 @@
               "focusNodes": {
                 ":singlePrefLabel": {
                   "nodes": [
-                    "_:Ndacdc39c2165461a814fe5ad07ace383"
+                    "_:Nf44e9f3b1da945f390a7aed178a3bbaf"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:Ndacdc39c2165461a814fe5ad07ace383\n"
+              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:Nf44e9f3b1da945f390a7aed178a3bbaf\n"
             }
           ]
         }
@@ -101,7 +101,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": true,
         "filename": "_sources/common/tests/single-prefLabel-lang-fail.json",
-        "url": "https://ogcincubator.github.io/bblocks-skos/_sources/common/tests/single-prefLabel-lang-fail.json",
+        "url": "https://rob-metalinkage.github.io/bblocks-skos/_sources/common/tests/single-prefLabel-lang-fail.json",
         "language": "json"
       },
       "result": true,
@@ -176,12 +176,12 @@
               "focusNodes": {
                 ":singlePrefLabel": {
                   "nodes": [
-                    "_:N836cabb198284209922b84cb87ce7388"
+                    "_:Nac9230328d8044f597d271983e3bc147"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:N836cabb198284209922b84cb87ce7388\n"
+              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:Nac9230328d8044f597d271983e3bc147\n"
             }
           ]
         }
@@ -192,7 +192,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": false,
         "filename": "_sources/common/tests/single-prefLabel.json",
-        "url": "https://ogcincubator.github.io/bblocks-skos/_sources/common/tests/single-prefLabel.json",
+        "url": "https://rob-metalinkage.github.io/bblocks-skos/_sources/common/tests/single-prefLabel.json",
         "language": "json"
       },
       "result": true,
@@ -254,12 +254,12 @@
               "focusNodes": {
                 ":singlePrefLabel": {
                   "nodes": [
-                    "_:N7d9450a668eb41dc89bafef7a27a5388"
+                    "_:Nbc6bb137ff93416e9877c9f569d4f71b"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:N7d9450a668eb41dc89bafef7a27a5388\n"
+              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:Nbc6bb137ff93416e9877c9f569d4f71b\n"
             }
           ]
         }
@@ -270,7 +270,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/skos/common/example_1_1.json",
-        "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/common/example_1_1.json",
+        "url": "https://rob-metalinkage.github.io/bblocks-skos/build/tests/skos/common/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "application/json"
@@ -334,12 +334,12 @@
               "focusNodes": {
                 ":singlePrefLabel": {
                   "nodes": [
-                    "_:N7221d305b98e4981b92ebacb12262c7f"
+                    "_:Nf726830449eb4ce2a221da8332e26e86"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:N7221d305b98e4981b92ebacb12262c7f\n"
+              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:Nf726830449eb4ce2a221da8332e26e86\n"
             }
           ]
         }
@@ -350,7 +350,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/skos/common/example_2_1.json",
-        "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/common/example_2_1.json",
+        "url": "https://rob-metalinkage.github.io/bblocks-skos/build/tests/skos/common/example_2_1.json",
         "exampleIndex": 2,
         "snippetIndex": 1,
         "language": "application/json"
@@ -414,12 +414,12 @@
               "focusNodes": {
                 ":singlePrefLabel": {
                   "nodes": [
-                    "_:N1275fd88bb3a4b60ad274df7a8b0a81a"
+                    "_:N0e40f97673254da28cef42f82bbef97c"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:N1275fd88bb3a4b60ad274df7a8b0a81a\n"
+              "message": "Focus nodes for _sources/common/rules.shacl:\n - Shape :singlePrefLabel: _:N0e40f97673254da28cef42f82bbef97c\n"
             }
           ]
         }
@@ -430,7 +430,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/skos/common/example_3_1.json",
-        "url": "https://ogcincubator.github.io/bblocks-skos/build/tests/skos/common/example_3_1.json",
+        "url": "https://rob-metalinkage.github.io/bblocks-skos/build/tests/skos/common/example_3_1.json",
         "exampleIndex": 3,
         "snippetIndex": 1,
         "language": "application/json"

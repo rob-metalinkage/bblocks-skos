@@ -20,25 +20,25 @@
   ],
   "dependsOn": [
     "ogc.skos.collection",
-    "ogc.skos.conceptScheme",
-    "ogc.skos.concept"
+    "ogc.skos.concept",
+    "ogc.skos.conceptScheme"
   ],
   "tags": [
     "skos",
     "profile"
   ],
   "shaclRules": {
-    "ogc.skos.common": [
-      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
-    ],
     "ogc.skos.concept": [
-      "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+      "https://rob-metalinkage.github.io/bblocks-skos/_sources/concept/rules.shacl"
+    ],
+    "ogc.skos.common": [
+      "https://rob-metalinkage.github.io/bblocks-skos/_sources/common/rules.shacl"
     ]
   },
-  "sourceFiles": "https://ogcincubator.github.io/bblocks-skos/_sources/sharedProfile/",
+  "sourceFiles": "https://rob-metalinkage.github.io/bblocks-skos/_sources/sharedProfile/",
   "rdfData": [],
   "validationPassed": true,
   "annotatedSchema": null,
-  "gitRepository": "https://github.com/ogcincubator/bblocks-skos",
+  "gitRepository": "https://github.com/rob-metalinkage/bblocks-skos",
   "gitPath": "_sources/sharedProfile"
 }

@@ -15,6 +15,6 @@ A shared SKOS profile with validation shapes
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/ogcincubator/bblocks-skos](https://github.com/ogcincubator/bblocks-skos)
+* URL: [https://github.com/rob-metalinkage/bblocks-skos](https://github.com/rob-metalinkage/bblocks-skos)
 * Path: `_sources/sharedProfile`
 

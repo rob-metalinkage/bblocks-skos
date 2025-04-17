@@ -31,19 +31,19 @@
       "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/iri-or-curie/schema.json"
     },
     "concepts": {
-      "$ref": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/schema.json#/$defs/conceptOrIdArray",
+      "$ref": "https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/concept/schema.json#/$defs/conceptOrIdArray",
       "x-jsonld-reverse": "skos:inScheme",
       "x-jsonld-type": "@id"
     },
     "topConcepts": {
-      "$ref": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/concept/schema.json#/$defs/conceptOrIdArray",
+      "$ref": "https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/concept/schema.json#/$defs/conceptOrIdArray",
       "x-jsonld-id": "skos:hasTopConcept",
       "x-jsonld-type": "@id"
     }
   },
   "allOf": [
     {
-      "$ref": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/schema.json"
+      "$ref": "https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/common/schema.json"
     }
   ],
   "oneOf": [

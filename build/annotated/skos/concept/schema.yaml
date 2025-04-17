@@ -13,11 +13,11 @@ $defs:
 type: object
 properties:
   topConceptOf:
-    $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/schema.yaml#/$defs/conceptSchemeOrIdArray
+    $ref: https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/conceptScheme/schema.yaml#/$defs/conceptSchemeOrIdArray
     x-jsonld-id: skos:topConceptOf
     x-jsonld-type: '@id'
   inScheme:
-    $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/conceptScheme/schema.yaml#/$defs/conceptSchemeOrIdArray
+    $ref: https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/conceptScheme/schema.yaml#/$defs/conceptSchemeOrIdArray
     x-jsonld-id: skos:inScheme
     x-jsonld-type: '@id'
   broaderConcepts:
@@ -53,11 +53,11 @@ properties:
     x-jsonld-id: skos:relatedMatches
     x-jsonld-type: '@id'
   collections:
-    $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/collection/schema.yaml#/$defs/collectionOrIdArray
+    $ref: https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/collection/schema.yaml#/$defs/collectionOrIdArray
     x-jsonld-id: skos:collections
     x-jsonld-type: '@id'
 allOf:
-- $ref: https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/schema.yaml
+- $ref: https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/common/schema.yaml
 oneOf:
 - not:
     required:

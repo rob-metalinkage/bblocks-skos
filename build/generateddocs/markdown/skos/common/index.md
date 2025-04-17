@@ -21,7 +21,7 @@ A generic SKOS object that can have labels and notes
 #### jsonld
 ```jsonld
 {
-  "@context": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld",
+  "@context": "https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld",
   "prefLabel": "A single label"
 }
 ```
@@ -51,7 +51,7 @@ A generic SKOS object that can have labels and notes
 #### jsonld
 ```jsonld
 {
-  "@context": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld",
+  "@context": "https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld",
   "prefLabel": {
     "en": "This is a multilingual label",
     "fr": "Ceci est une \u00e9tiquette multilingue"
@@ -85,7 +85,7 @@ A generic SKOS object that can have labels and notes
 #### jsonld
 ```jsonld
 {
-  "@context": "https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld",
+  "@context": "https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld",
   "altLabel": {
     "": "A label with no language",
     "en": [
@@ -219,8 +219,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/schema.json)
-* JSON version: [schema.json](https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/schema.yaml)
+* YAML version: [schema.yaml](https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/common/schema.json)
+* JSON version: [schema.json](https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/common/schema.yaml)
 
 
 # JSON-LD Context
@@ -281,7 +281,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://ogcincubator.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld)
+[context.jsonld](https://rob-metalinkage.github.io/bblocks-skos/build/annotated/skos/common/context.jsonld)
 
 ## Sources
 
@@ -291,6 +291,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/ogcincubator/bblocks-skos](https://github.com/ogcincubator/bblocks-skos)
+* URL: [https://github.com/rob-metalinkage/bblocks-skos](https://github.com/rob-metalinkage/bblocks-skos)
 * Path: `_sources/common`
 
